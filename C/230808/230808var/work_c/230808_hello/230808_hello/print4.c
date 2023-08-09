@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
 int main(void)
 
@@ -6,7 +6,7 @@ int main(void)
 	printf("surper power\n");
 	printf("%d\n" , 4);
 	printf("now\n");
-	printf("%s\n", "ÁÁ¾Ò¾î");
+	printf("%s\n", "ì¢‹ì•˜ì–´");
 	printf("%d\n", 34);
-	printf("% .1fcm\n", 180.2);
+	printf("%.1fcm\n", 180.2);
 }

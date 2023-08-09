@@ -1,44 +1,44 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
 int main()
 {
-	char* a = "ÀÌ¸§";
-	char* b = "³ªÀÌ";
-	char* c = "ÀüÈ­";
-	char* d = "ÁÖ¼Ò";
-	char* e = "Å°";
-	char* f = "È«±æµ¿";
+	char* a = "ì´ë¦„";
+	char* b = "ë‚˜ì´";
+	char* c = "ì „í™”";
+	char* d = "ì£¼ì†Œ";
+	char* e = "í‚¤";
+	char* f = "í™ê¸¸ë™";
 	int g = 200.0;
 	double h = 180.2;
 	char o = 'B';
 	float q = 489.34;
-	char* p = "Á¶¼± ÇÑ¾ç È«´ë°¨´ì 11¹øÁö";
+	char* p = "ì¡°ì„  í•œì–‘ í™ëŒ€ê°ëŒ 11ë²ˆì§€";
 	int age = 255;
 
 
-	printf("³ªÀÌ : %d¼¼\n", age);
-	age = age + 539; // ³ªÀÌ¸¦ 539 ´õÇÔ.
-	printf("539³â ÈÄ ³ªÀÌ : %d¼¼\n", age);
+	printf("ë‚˜ì´ : %dì„¸\n", age);
+	age = age + 539; // ë‚˜ì´ë¥¼ 539 ë”í•¨.
+	printf("539ë…„ í›„ ë‚˜ì´ : %dì„¸\n", age);
 
 	double pi = 3.14159;
-	printf("¿øÁÖÀ² : %1f\n", pi);
+	printf("ì›ì£¼ìœ¨ : %1f\n", pi);
 
 	double radius = 5.0;
 	double radius2 = radius * radius;
-	double area = pi* radius2 ; //¿øÀÇ ³ĞÀÌ °è»ê
-	printf("¹İÁö¸§ÀÌ %1fÀÎ ¿øÀÇ ³ĞÀÌ : %1f\n", radius, area);
+	double area = pi* radius2 ; //ì›ì˜ ë„“ì´ ê³„ì‚°
+	printf("ë°˜ì§€ë¦„ì´ %1fì¸ ì›ì˜ ë„“ì´ : %1f\n", radius, area);
 
 
 	printf("-------------------------------\n");
-	printf("¼ö°­»ı Á¤º¸ È®ÀÎ¼­\n");
+	printf("ìˆ˜ê°•ìƒ ì •ë³´ í™•ì¸ì„œ\n");
 	printf("-----------------------------\n");
 	printf("%s : %s\n", a, f);
 	printf("%s : 200\n", b);
 	printf("%s : 010-1234-4321\n",c );
 	printf("%s : %s\n", d, p);
 	printf("%s : %.2fcm\n", e, h);
-	printf("¸ö¹«°Ô :%dkg\n", g);
-	printf("Ç÷¾×Çü : %cÇü\n", o);
-	printf("¹«½¼¼Ò¸® ÇÏ´Ï : %.4f¼Ò¸®", q);
+	printf("ëª¸ë¬´ê²Œ :%dkg\n", g);
+	printf("í˜ˆì•¡í˜• : %cí˜•\n", o);
+	printf("ë¬´ìŠ¨ì†Œë¦¬ í•˜ë‹ˆ : %.4fì†Œë¦¬", q);
 	
 }
