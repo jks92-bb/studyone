@@ -12,7 +12,7 @@ int	main()
 
 		for (int is = 2; is < 10; is++)
 		{
-			printf("%dx%d=%d\t", cur, is, cur, cur * is);
+			printf("%dx%d=%d\t", cur, is, cur * is);
 		}
 
 		printf("\n");
