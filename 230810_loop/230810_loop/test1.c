@@ -1,10 +1,10 @@
-#define _CRT_SECURE_NO_WARNINGS 
+ï»¿#define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 
 int	main()
 {
 	for (int i = 2; i < 10; i++) {
-		printf("%d´Ü\t", i);
+		printf("%dë‹¨\t", i);
 	}
 	printf("\n");
 	for (int cur = 1; cur < 10; cur++) {
