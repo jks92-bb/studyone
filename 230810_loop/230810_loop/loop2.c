@@ -1,11 +1,11 @@
-//loop.c
+ï»¿//loop.c
 #define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 
 int main()
 {
 	int dan = 0, num = 1;
-	printf("±¸±¸´Ü: ");
+	printf("êµ¬êµ¬ë‹¨: ");
 	scanf("%d", &dan);
 
 	while (num < 10)
@@ -13,6 +13,6 @@ int main()
 		printf("%dx%d = %d \n", dan, num, dan*num);
 		num++;
 	}
-	printf("ÇÁ·Î±×·¥ Á¾·á\n");
+	printf("í”„ë¡œê·¸ëž¨ ì¢…ë£Œ\n");
 	return 0;
 }

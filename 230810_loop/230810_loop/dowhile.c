@@ -1,4 +1,4 @@
-//loop.c
+ï»¿//loop.c
 #define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 
@@ -7,11 +7,11 @@ int main()
 	int total = 0, num = 0;
 	do
 	{
-		printf("Á¤¼ö ÀÔ·Â(0 to quit):");
+		printf("ì •ìˆ˜ ì…ë ¥(0 to quit):");
 		scanf("%d", &num);
-		total += num; //0ÀÌ ¾Æ´Ñ ¼ıÀÚµéÀÇ ÇÕÀ» ±¸ÇÔ.
+		total += num; //0ì´ ì•„ë‹Œ ìˆ«ìë“¤ì˜ í•©ì„ êµ¬í•¨.
 
 	} while (num != 0);
-	printf("ÇÕ°è : %d\n", total);
+	printf("í•©ê³„ : %d\n", total);
 	return 0;
 }

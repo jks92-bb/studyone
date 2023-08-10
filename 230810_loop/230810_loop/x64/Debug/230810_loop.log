@@ -1,6 +1,2 @@
-﻿  test1.c
-D:\work_c\230810_loop\230810_loop\test1.c(1,1): warning C4828: 파일에 0x74 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-D:\work_c\230810_loop\230810_loop\test1.c(1,1): warning C4828: 파일에 0x75 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-D:\work_c\230810_loop\230810_loop\test1.c(15,43): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
-D:\work_c\230810_loop\230810_loop\test1.c(15,43): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 3개 필요하지만 4개가 제공되었습니다.
+﻿  loop2.c
   230810_loop.vcxproj -> D:\work_c\230810_loop\x64\Debug\230810_loop.exe
