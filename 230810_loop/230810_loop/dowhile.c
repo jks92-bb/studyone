@@ -2,7 +2,7 @@
 #define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 
-int main()
+int main()// do while  먼저 한번 실행하고 조건 체크
 {
 	int total = 0, num = 0;
 	do

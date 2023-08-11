@@ -7,7 +7,7 @@ int main()
 	int cut = 2;
 	int is = 0;
 
-	while (cut < 10)	// 2단부터 9단까지 반복
+	while (cut < 10)	// 2단부터 9단까지 반복  조건을 먼저 체크
 	{
 		is = 1; //  새로운 단의 시작을 위해서
 		while (is < 10) //각 단의 1부터 9의 곱을 표현
