@@ -27,5 +27,41 @@
     <ClCompile Include="exam1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="continue.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="break.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="switch.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="swith2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="switch3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="newerror.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="new2error.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="new3error.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="newr.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pratice.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

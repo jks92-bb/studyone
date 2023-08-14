@@ -43,7 +43,7 @@ int main()
 	// 국어, 영어, 수학 점수를 입력받아서 총점, 평균 학점을 구하는 프로그램.
 	// 학점 : 100~90:A학점, 89~80:B학점, ....59~0:F학점.
 	// A, B, C, D, E, F 학점.
-
+	
 	int kor = 0, eng = 0, ma = 0;
 
 
@@ -73,8 +73,8 @@ int main()
 	}
 	printf("수학 : %d점\n", ma);
 
-	int sum = kor + eng + ma;
-	int avg = sum / 3;
+	int sum = kor + eng + ma;	//	국영수 총점
+	int avg = sum / 3;	//	국영수 평균
 
 	printf("총점 : %d\t", sum);
 	printf("평균 : %d\n", avg);
@@ -97,6 +97,11 @@ int main()
 	else {
 		printf("전체 F학점\n");
 	}
+
+	
+
+
+
 
 
 }
