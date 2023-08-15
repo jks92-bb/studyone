@@ -21,6 +21,7 @@ int main()
 
 		char me = 0;
 		scanf(" %c", &me);
+
 		if (me == 'x') {
 			printf("프로그램 종료\n");
 			break;
