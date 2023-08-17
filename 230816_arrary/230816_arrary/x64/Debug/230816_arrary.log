@@ -1,36 +1,43 @@
-﻿  check.c
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x2c 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x2e 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x2f 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x31 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x32 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x33 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x34 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x38 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x3d 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x3e 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x3f 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x40 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x44 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x46 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x47 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x8b 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x8d 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x8e 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x90 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x94 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x95 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x97 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x98 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x9c 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x9e 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0x9f 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0xaf 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0xb1 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0xb2 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0xb4 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0xb8 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0xb9 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0xbb 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\check.c(1,1): warning C4828: 파일에 0xbc 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-  230816_arrary.vcxproj -> C:\Users\User\Documents\GitHub\studyone\230816_arrary\x64\Debug\230816_arrary.exe
+﻿  exam5.c
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x4c 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x4e 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x4f 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x51 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x59 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x5a 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x5c 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x5d 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x61 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x63 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x66 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x69 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x6a 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x6c 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x6f 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x70 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x73 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x74 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x75 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xa0 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xa1 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xa5 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xa7 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xa8 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xa9 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xaa 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xac 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xad 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xb3 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0xb4 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x128 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x129 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x12b 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x12c 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x12d 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x15b 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(1,1): warning C4828: 파일에 0x15c 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(14,29): error C2001: 상수에 줄 바꿈 문자가 있습니다.
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(16,2): error C2143: 구문 오류: ')'이(가) 'if' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(23,10): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(23,10): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
+C:\Users\User\Documents\GitHub\studyone\230816_arrary\230816_arrary\exam5.c(23,10): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
