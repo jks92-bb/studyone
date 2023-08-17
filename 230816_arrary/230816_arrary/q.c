@@ -11,7 +11,7 @@ int main()
 	{
 		for (j = 0; j < 2; j++)
 		{
-			printf("%dÃþ %dÈ£ ÀÎ±¸¼ö: ", i + 1, j + 1);
+			printf("%dÃþ %dÈ£ ÀÎ±¸¼ö : ", i + 1, j + 1);
 			scanf("%d", &villa[i][j]);
 		}
 	}
