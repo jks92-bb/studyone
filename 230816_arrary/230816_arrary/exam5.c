@@ -1,25 +1,35 @@
-#define _CRT_SECURE_NO_WARNINGS 
+ï»¿#define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 
 int main()
 {
-	// 1Â÷¿ø ¹è¿­ dmz¿¡ Áö·Ú°¡ ¾Æ·¡Ã³·³ ¸Å¼³µÇ¾úÀ½.
+	// 1ì°¨ì› ë°°ì—´ dmzì— ì§€ë¢°ê°€ ì•„ë˜ì²˜ëŸ¼ ë§¤ì„¤ë˜ì—ˆìŒ.
 	// * B * B * 
 	// 1 1 2 1 1
-	// * : Áö·Ú°¡ ¾ø´Â ¶¥, B: Áö·Ú.
-	char dmz[] = { '*', 'B', '*', 'B', '*' };
+	// * : ì§€ë¢°ê°€ ì—†ëŠ” ë•…, B: ì§€ë¢°.
+	char dmz[] = { 'B', '*', '*', 'B', '*' };
 	int arr[5] = { 0 };
 	int i = 0;
 
-	if (dmz[0] == '*') {printf("¾ÈÀüÁö´ë\n");}
+	if (dmz[0] == '*') {
+		printf("ì•ˆì „ì§€ëŒ€\n");
+	}
 
 	if (dmz[1] == 'B') {
-		printf("Áö·Ú\n");
+		printf("ì§€ë¢°\n");
 	}
-		
-	for (int i = 0; i < 5; i++) {
-		if(i=0, 0=='*')
 
-		printf("%d");
+	const int start = 0; // ìƒìˆ˜ë³€ìˆ˜ (ë³€ìˆ˜ì˜ ê°’ì„ ë³€ê²½x)
+	#define end 4 // ìƒìˆ˜ë³€ìˆ˜
+
+	for (int i = 0; i < 5; i++) {
+		if (dmz[i] == 'B') arr[i] += 1; // == arr[i]++
+		/*if (dmz[i - 1] == 'B' && i !=0) arr[i] += 1;
+		if (dmz[i + 1] == 'B' && i != 0) arr[i] += 1;*/
+		if (dmz[i - 1] == 'B' && i != start) arr[i]++;
+		if (dmz[i + 1] == 'B' && i != end) arr[i]++;
+	}
+	for (int i = 0; i < 5; i++) {
+		printf("%d\t", arr[i]);
 	}
 }

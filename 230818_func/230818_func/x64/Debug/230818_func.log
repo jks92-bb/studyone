@@ -1,0 +1,3 @@
+﻿  exan2.c
+C:\Users\User\Documents\GitHub\studyone\230818_func\230818_func\exan2.c(17,8): warning C4477: 'scanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'void (__cdecl *)(int)'입니다.
+  230818_func.vcxproj -> C:\Users\User\Documents\GitHub\studyone\230818_func\x64\Debug\230818_func.exe
