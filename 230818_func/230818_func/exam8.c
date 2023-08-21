@@ -10,19 +10,19 @@ int main()
 	int math = 0;
 	printf("국어 점수 입력하시오.\n");
 	scanf("%d", &kor);
-	for (kor; kor > 100|| kor < 0;) {
+	while (kor > 100|| kor < 0) {
 		printf("다시 입력하시오.");
 		scanf("%d", &kor);
 	}
 	printf("영어 점수 입력하시오.\n");
 	scanf("%d", &eng);
-	for (eng; eng > 100 || eng < 0;) {
+	while(eng > 100 || eng < 0) {
 		printf("다시 입력하시오.");
 		scanf("%d", &eng);
 	}
 	printf("수학 점수 입력하시오.\n");
 	scanf("%d", &math);
-	for (math; math > 100 || math < 0;) {
+	while(math > 100 || math < 0) {
 		printf("다시 입력하시오.");
 		scanf("%d", &math);
 	}
