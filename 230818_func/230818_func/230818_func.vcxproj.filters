@@ -39,5 +39,26 @@
     <ClCompile Include="exan2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="exam3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exan4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pratice.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam6.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam7.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam8.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

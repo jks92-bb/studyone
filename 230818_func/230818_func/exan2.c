@@ -14,7 +14,9 @@ void main()
 	//show_day()
 	printf("숫자를 입력하세요.\n");
 	int i=0;
-	scanf("%d\n",show_day);
+	scanf("%d",&i);
+
+	show_day(i); // show_day 함수 호출(실행)
 	
 
 }
