@@ -1,5 +1,39 @@
-// 비어있는 배열 6개.
-// 반복 6번 돌기. random 숫자 하나 획득.
-// 최초의 숫자는 중복되지 않았기에 바로 넣을 수 있다.
-// 두번쨰 숫자는 첫번째 숫자와 동일한지 비교해야 한다.
-// 그렇게 비교하여 다르면 넣을 수 있다.(반복문)
+#include <stdio.h>
+#include <stdlib.h>	// srand()
+#include <time.h>	// time()
+int check_odd(int a[], int t, int num);
+
+int main()
+{
+	srand(time(NULL)); // 매번 다른 시드값 생성
+
+	int random = 0;// 난수를 저장할 변수
+	int arr[6] = { 0 }; //6개의 숫자를 저장하는 1차원 배열
+
+	for (int i = 0; i < 6; i++) {
+		int random;
+		do {
+			random = (rand() % 45) + 1;
+		} while (check_odd(arr, i, random));
+
+		arr[i] = random; //arr[0]~arr[5] 에 난수를 저장.
+		printf("%d ", random);
+
+	}
+	printf("\n");
+
+
+}
+
+int check_odd(int a[], int t, int num)
+{
+
+	for (int i = 0; i < t; i++) {
+
+		if (a[i] == num)
+		{
+			return 1;
+		}
+		return 0;
+	}
+}
