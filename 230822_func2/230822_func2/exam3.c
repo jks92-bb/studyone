@@ -18,7 +18,6 @@ int main()
 
 		arr[i] = random; //arr[0]~arr[5] 에 난수를 저장.
 		printf("%d ", random);
-
 	}
 	printf("\n");
 
@@ -27,7 +26,6 @@ int main()
 
 int check_odd(int a[], int t, int num)
 {
-
 	for (int i = 0; i < t; i++) {
 
 		if (a[i] == num)
