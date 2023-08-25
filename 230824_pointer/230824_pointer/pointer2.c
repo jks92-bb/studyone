@@ -8,7 +8,7 @@ int main()
 	(*pnum) += 30;
 
 	pnum = &num2;
-	(*pnum) -= 30;
+	(*pnum) -= 30; //	(*pnum) = (*pnum) -30;
 
 	printf("num1:%d, num2:%d \n", num1, num2);
 

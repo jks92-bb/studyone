@@ -11,7 +11,7 @@ int main()
 	// 포인터 변수 p에 배열변수 arr의 주소값을 참조
 	p = arr;
 	printf("p[0] :%d\n", p[0]);
-	printf("*p :%d\n", *p);
+	printf("*p :%d\n", *p); // *(p+0)
 	printf("arr[0]:%d\n", arr[0]);
 
 	printf("p[1] :%d\n", p[1]);
