@@ -31,19 +31,19 @@ int main()
 		printf("수학 : %d\n", score[i].math);
 		printf("합 : %d\n", score[i].sum);
 		printf("평균 : %d\n", score[i].avg);
-		printf("학점 : %d\n", hak());
+		//printf("학점 : %d\n", hak());
 		printf("----------------------\n");
 	}	
 }
 
 
 
-int hak(int[])
-{
-	struct student score[5] = { 0 };
-	for (int i = 0; i < 5; i++) {
-		score[i].avg
-	}
-
-		
-}
+//int hak(int[])
+//{
+//	struct student score[5] = { 0 };
+//	for (int i = 0; i < 5; i++) {
+//		score[i].avg
+//	}
+//
+//		
+//}
