@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h> //문자열 처리 관련
 
 struct student {
 	char name[20];

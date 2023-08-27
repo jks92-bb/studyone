@@ -1,4 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(230821_pratice.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
-  struct1.c
-C:\Users\GOD\Documents\GitHub\230821_pratice\230821_pratice\struct1.c(19,8): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  230821_pratice.vcxproj -> C:\Users\GOD\Documents\GitHub\230821_pratice\x64\Debug\23_pratice.exe
