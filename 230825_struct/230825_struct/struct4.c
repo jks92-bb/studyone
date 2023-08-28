@@ -7,7 +7,6 @@ struct person
 	char name[20];
 	char phonenum[20];
 	int age;
-
 };
 
 int main()
@@ -20,6 +19,4 @@ int main()
 	int i;
 	for (i = 0; i < 3; i++)
 		printf("%s %s %d \n", arr[i].name, arr[i].phonenum, arr[i].age);
-
-
 }

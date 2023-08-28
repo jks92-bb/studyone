@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 struct person // 구조체 정의 선언
 {
 	char name[20];
@@ -28,6 +27,4 @@ int main()
 		printf("번호 : %s\n", arr[i].phonenum);
 		printf("나이 : %d\n", arr[i].age);
 	}
-
-	
 }

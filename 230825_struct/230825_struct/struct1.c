@@ -22,6 +22,12 @@ int main()
 		int age1;
 	};
 
+	//1명의 학생 정보를 사용하는 프로그램.
+	struct student st;
+
+	//1000명의 학생 정보를 사용하는 프로그램.
+	struct student arr[1000];
+
 
 
 

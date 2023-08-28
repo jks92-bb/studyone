@@ -39,7 +39,6 @@ int main()
 	}
 }
 
-
 char hak(int avg)
 {
 	if (avg >= 90 && avg <=100) {

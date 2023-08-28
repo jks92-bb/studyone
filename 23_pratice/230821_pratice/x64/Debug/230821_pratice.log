@@ -1,4 +1,4 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(230821_pratice.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
-  struct2.c
-C:\Users\GOD\Documents\GitHub\23_pratice\230821_pratice\struct2.c(17,16): warning C4133: '초기화 중': 'point2 *'과(와) 'point *' 사이의 형식이 호환되지 않습니다.
-  230821_pratice.vcxproj -> C:\Users\GOD\Documents\GitHub\23_pratice\x64\Debug\23_pratice.exe
+  rand.c
+C:\Users\User\Documents\GitHub\studyone\23_pratice\230821_pratice\rand.c(9,11): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  230821_pratice.vcxproj -> C:\Users\User\Documents\GitHub\studyone\23_pratice\x64\Debug\23_pratice.exe

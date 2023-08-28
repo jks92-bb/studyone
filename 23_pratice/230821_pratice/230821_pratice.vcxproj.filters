@@ -27,5 +27,8 @@
     <ClCompile Include="struct2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="rand.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

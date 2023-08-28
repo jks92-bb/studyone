@@ -36,8 +36,6 @@ int main()
 	}	
 }
 
-
-
 //int hak(int[])
 //{
 //	struct student score[5] = { 0 };

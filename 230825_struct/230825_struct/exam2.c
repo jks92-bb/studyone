@@ -40,25 +40,31 @@ int main()
 	}
 
 	for (int i = 0; i < 100; i++) {
-		printf("<<<%d번째 학생정보>>>>\n", i + 1);
-		printf("이름 : %s\n", inf[i].name);
-		printf("주소 : %s\n", inf[i].addr);
-		printf("나이 : %d\n", inf[i].age);
-		printf("전화번호 : %s\n", inf[i].phone);
-		printf("교수 나이 : %d\n", inf[i].pro.age);
-		printf("교수 이름 : %s\n", inf[i].pro.name);
-		printf("----------------------\n");
+		if (i < 99) {
+			printf("<<<%d번째 학생정보>>>>\n", i + 1);
+			printf("이름 : %s\n", inf[i].name);
+			printf("주소 : %s\n", inf[i].addr);
+			printf("나이 : %d\n", inf[i].age);
+			printf("전화번호 : %s\n", inf[i].phone);
+			printf("교수 나이 : %d\n", inf[i].pro.age);
+			printf("교수 이름 : %s\n", inf[i].pro.name);
+			printf("----------------------\n");
+		}
+		else {
+			printf("<<<%d번째 학생정보>>>>\n", i + 1);
+			printf("이름 : %s\n", inf[i].name);
+			printf("주소 : %s\n", inf[i].addr);
+			printf("나이 : %d\n", inf[i].age);
+			printf("전화번호 : %s\n", inf[i].phone);
+			printf("교수 나이 : %d\n", inf[i].pro.age);
+			printf("교수 이름 : %s\n", "정우성");
+			printf("----------------------\n");
+		}
 	}
 
-	/*inf[0].pro.age = 50;
+	inf[0].pro.age = 50;
 	strcpy(inf[0].pro.name, "김교수");
-	printf("%s 학생의 담당 교수 : %s \n", inf[0].name, inf[0].pro.name);*/
-
-
-
-
-
-
+	printf("%s 학생의 담당 교수 : %s \n", inf[0].name, inf[0].pro.name);
 
 }
 

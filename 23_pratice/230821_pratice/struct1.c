@@ -3,18 +3,17 @@
 #include <time.h>
 void st(i);
 
-
-struct money {
+typedef struct money {
 	int won;
 	int dollar;
 	int jpy;
 	int sum;
-};
+} money;
 
 
 int main()
 {
-	struct money all[3] = { 0 };
+	money all[3] = { 0 };
 	int p[] = { 3000, 4000, 5000, 7000, 10000, 20000 };
 	srand(time(NULL));
 
