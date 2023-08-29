@@ -15,13 +15,14 @@ int main()
 
 	srand(time(NULL));
 
-	
-	fputs(name[rand() % 4] ,fp);
 	fputc('A', fp);
 	fputc('B', fp);
 	fputs("my name is hong\n", fp);
 	fputs("your name is yoon \n", fp);
+	for (int i = 0; i < 4; i++) {
+		fputs(name[i], fp);
+		fputs("\n",fp);
+	}
+
 	fclose(fp);
-
-
 }
