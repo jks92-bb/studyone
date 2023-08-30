@@ -13,27 +13,23 @@ int main()
 		puts("파일오픈 실패!");
 		return -1;
 	}
-	
-	
-	
-	ch = fgetc(fp);
+
+	ch = fgetc(fp); //아스키코드라고 생각하면 됌 여기서 ch는. 
 	printf("%c \n", ch);
 	ch = fgetc(fp);
 	printf("%c \n", ch);
-		
+	// \n을 만날때까지 read.	
 	fgets(str, sizeof(str), fp);
 	printf("%s", str);
 	fgets(str, sizeof(str), fp);
+	printf("%s", str);	
 	printf("%s", str);
-	
-	printf("%s", str);
+
 	for (int i = 0; i < 4; i++) {
 		fgets(str, sizeof(str), fp);
 		printf("%s", str);
 	}
 
-
 	fclose(fp);
 	return 0;
-
 }

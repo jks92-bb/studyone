@@ -14,7 +14,7 @@ int main()
 		return -1;
 	}
 
-	//파일 끝까지 문자 1개씩 읽음.
+	//파일 끝까지 문자 1개씩 읽음. //EOF = END OF FILE
 	while ((ch = fgetc(src)) != EOF) {
 		fputc(ch, des);
 	}

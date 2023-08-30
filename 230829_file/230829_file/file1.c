@@ -10,14 +10,15 @@ int main()
 	//  윈도우 관리자권한 정책 때문에 c:/ 바로 밑에는 생성불가.
 	// c:/test 는 가능함.
 	// 1. 파일 오픈( wt: write, text 쓰기 텍스트모드)
-	// W: 기존의 내용을 무시하고 덮어씀.
+	// W: 기존의 내용을 무시하고 덮어씀.(기존 삭제)
 	// a: 기존 내용에 붙여짐.
+	// r: 파일의 내용을 읽어옴.
 	FILE* fp = fopen("data.txt", "at");
 	if (fp == NULL) {
 		puts("파일오픈 실패!\n");
 		return -1; //exit(0)써도 됌. 의미상.
 	}
-	fputc('K', fp);
+	fputc('K', fp); // 문자 1개를 파일에 입력
 	fputc('L', fp);
 	fputc('M', fp);
 	fclose(fp);
