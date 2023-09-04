@@ -67,8 +67,7 @@ void file_read(char filename[]);
 void file_search(char filename[], char name[]);
 void file_delete(char filename[], char delName[]);
 void file_delete2(char filename[], char delName[]); //디버깅 코드
-void file_delete3(char filename[], char delName[]);
-void file_update(char filename[], char sName[], char dName[]);
+void file_update(char filename[], char sname[], char dname[]);
 
 int main()
 {
@@ -152,7 +151,7 @@ int main()
 			char name[20];
 			scanf("%s", name);
 			printf("%s 삭제 중입니다.\n", name);
-			file_delete3(file, name);
+			file_delete(file, name);
 			Sleep(2000);
 			system("pause");
 			break;
@@ -444,50 +443,22 @@ void file_delete2(char filename[], char delName[]) //디버깅 코드
 	}
 }	//static 이상한 오류 뜨면 static 쓰기. 배열 오류 나타날 시.
 
-void file_delete3(char filename[], char delName[]) {
-	FILE* fp = fopen(filename, "rb");
-	if (fp == NULL) {
-		printf("파일 오픈 오류 \n");
-		exit(0);
-	}
-	ADDR ad = { 0 };
-	ADDR del_arr[200] = { 0 };
-	while (fread(&ad, sizeof(ADDR), 1, fp) == 1) {
-		if (strcmp(ad.name, delName) != 0) {
-
-		}
-
-
-	}
-
-
-
-
-
-
-
-
-
-		
-}
-
-void file_update(char filename[], char sName[], char dName[])
+void file_update(char filename[], char sname[], char dname[])
 {
 	FILE* fp = fopen(filename, "rb");
 	if (fp == NULL) {
-		printf("파일 오픈 오류\n");
+		printf("파일 검색 오류!\n");
 		exit(0);
 	}
+
 	ADDR ad = { 0 };
 	ADDR del_arr[200] = { 0 };
 	int count = 1;
 	int check = 0;
 	int i = 0;
-	while (fread(&ad, sizeof(ADDR), 1, fp) == 1) {
-
-		if (strcmp(ad.name, sName) == 0)
-		{
-			strcpy(del_arr[i].name, dName);
+	while (fread(&ad, sizeof(ad), 1, fp) == 1) {
+		if (strcmp(ad.name, sname) == 0) { // 수정할 이름과 같다면
+			strcpy(del_arr[i].name, dname);
 			check = 1;
 		}
 		else {
@@ -499,21 +470,21 @@ void file_update(char filename[], char sName[], char dName[])
 		strcpy(del_arr[i].email, ad.email);
 		i++;
 	}
-
 	fclose(fp);
-
-	printf("복사한 개수 : %d\n", i);
 	int size = i;
 	if (check == 0) {
-		printf("데이터가 존재하지 않습니다.\n");
-		return;
+		printf("수정할 데이터가 존재하지 않습니다.\n");
+		return; // void 함수 종료
 	}
+
 	FILE* fp2 = fopen(filename, "wb");
 	if (fp2 == NULL) {
-		printf("파일 읽기 오류\n");
+		printf("파일 오픈 실패!\n");
 		return;
 	}
+
 	for (int i = 0; i < size; i++) {
+		printf("del_arr[%d]:%d\n", i, del_arr[i].id);
 		fwrite(&del_arr[i], sizeof(ADDR), 1, fp2);
 	}
 	fclose(fp2);
