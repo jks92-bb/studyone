@@ -131,6 +131,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="file2.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="menu.c" />
     <ClCompile Include="struct1.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
