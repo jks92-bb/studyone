@@ -151,7 +151,7 @@ int main()
 			char name[20];
 			scanf("%s", name);
 			printf("%s 삭제 중입니다.\n", name);
-			file_delete(file, name);
+			file_delete2(file, name);
 			Sleep(2000);
 			system("pause");
 			break;

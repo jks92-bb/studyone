@@ -412,7 +412,7 @@ void file_delete2(char filename[], char delName[]) //디버깅 코드
 	int count = 1;
 	int i = 0;
 	while (fread(&ad, sizeof(ADDR), 1, fp) == 1) {
-		if (strcmp(ad.name, delName) != 0) {
+		if (strcmp(ad.name, delName) != 0) { // 삭제할 이름이 아니라면
 			del_arr[i].id = ad.id;
 			strcpy(del_arr[i].name, ad.name);
 			strcpy(del_arr[i].addr, ad.addr);
@@ -425,7 +425,7 @@ void file_delete2(char filename[], char delName[]) //디버깅 코드
 	fclose(fp);
 	printf("복사한 개수: %d \n", i);
 	int size = i;
-	if (check == 0) {
+	if (check == 0 && strcmp(ad.name, delName) != 0) {
 		printf("데이터가 존재하지 않습니다.\n");
 		return;
 	}
@@ -434,17 +434,16 @@ void file_delete2(char filename[], char delName[]) //디버깅 코드
 		printf("파일 읽기 오류\n");
 		exit(0);
 	}
-	for (int i = 0; i < 200; i++) {
-		if (strcmp(ad.name, "") != 0) {
-			if (del_arr[i].id != 0) {
-				fwrite(&del_arr[i], sizeof(ADDR), 1, fp2);
-			}
-		}
-		fclose(fp2);
+	for (int i = 0; i < size; i++) {
+		printf("del_arr[%d]:%d\n", i, del_arr[i].id);
+		fwrite(&del_arr[i], sizeof(ADDR), 1, fp2);
 	}
-}	//static 이상한 오류 뜨면 static 쓰기. 배열 오류 나타날 시.
+	fclose(fp2);
+}
+	//static 이상한 오류 뜨면 static 쓰기. 배열 오류 나타날 시.
 
-void file_delete3(char filename[], char delName[]) {
+void file_delete3(char filename[], char delName[])
+{	//버그 없는 코드.
 	FILE* fp = fopen(filename, "rb");
 	if (fp == NULL) {
 		printf("파일 오픈 오류 \n");
@@ -452,24 +451,42 @@ void file_delete3(char filename[], char delName[]) {
 	}
 	ADDR ad = { 0 };
 	ADDR del_arr[200] = { 0 };
-	while (fread(&ad, sizeof(ADDR), 1, fp) == 1) {
+	int check = 0;
+	int count = 1;
+	int i = 0;
+
+	while (fread(&ad, sizeof(ad), 1, fp) == 1) {
+
 		if (strcmp(ad.name, delName) != 0) {
-
+			del_arr[i].id = ad.id;
+			strcpy(del_arr[i].name, ad.name);
+			strcpy(del_arr[i].addr, ad.addr);
+			strcpy(del_arr[i].tel, ad.tel);
+			strcpy(del_arr[i].email, ad.email);
+			check = 1;
+			i++;
 		}
-
+	}
+	fclose(fp);
+	printf("복사한 개수 : %d\n", i);
+	if (check == 0 && strcmp(ad.name, delName) != 0) {
+		printf("데이터가 존재하지 않습니다.\n");
+		return;
+	}
+	FILE* fp2 = fopen(filename, "wb");
+	if (fp2 == NULL) {
+		printf("파일 읽기 오류\n");
+		return;
+	}
+	for (int i = 0; i < 200; i++) {
+		// 배열에 데이터가 없으면 반복문 탈출
+		if (del_arr[i].id == 0) break;
+		fwrite(&del_arr[i], sizeof(ADDR), 1, fp2);
 
 	}
-
-
-
-
-
-
-
-
-
-		
+	fclose(fp2);
 }
+
 
 void file_update(char filename[], char sName[], char dName[])
 {
