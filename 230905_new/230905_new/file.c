@@ -39,7 +39,8 @@ void file_dele_all(char filename[])
 	fclose(fp);
 }
 
-void file_read(char filename[]) {
+void file_read(char filename[])
+{
 	FILE* fp = fopen(filename, "rb");
 	if (fp == NULL) {
 		printf("파일 읽기 오류\n");
@@ -66,8 +67,6 @@ void file_read(char filename[]) {
 		/*}*/
 
 	}
-
-
 	fclose(fp);
 	if (check == 0) {
 		printf("데이터가 존재하지 않습니다.\n");
@@ -75,7 +74,7 @@ void file_read(char filename[]) {
 
 }
 
-void file_search(char filename[], char name[],char email[], int id)
+void file_search(char filename[], char name[], char email[], int id)
 {
 	FILE* fp = fopen(filename, "rb");
 	if (fp == NULL) {
@@ -96,7 +95,7 @@ void file_search(char filename[], char name[],char email[], int id)
 			printf("==========================\n");
 			check = 1;
 		}
-		
+
 	}
 	fclose(fp);
 	if (check == 0) {

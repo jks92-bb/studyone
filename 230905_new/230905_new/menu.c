@@ -35,10 +35,6 @@ int search_menu()
 	printf("메뉴 선택:");
 	int menu;
 	scanf("%d", &menu);
-	/*if (menu == 4) {
-		return main_menu();
-	}*/
-	/*else {*/
-		return menu;
-	/*}*/
+	return menu;
+
 }
