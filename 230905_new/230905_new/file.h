@@ -13,6 +13,9 @@ typedef struct _ADDR {
 	char email[50];
 } ADDR;
 
+
+
+
 void file_write_rand(ADDR ad[], char filename[], int len);
 void file_write_direct(ADDR ad, char filename[]);
 void file_dele_all(char filename[]);

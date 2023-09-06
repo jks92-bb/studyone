@@ -17,3 +17,18 @@ int main_menu() {
 	scanf("%d", &menu);
 	return menu;
 }
+
+int menu_3()
+{
+	int i = 0;
+	if (i == 0) {
+		printf("==========주식==========\n");
+	}
+	if (i == 1) {
+		printf("==========채권==========\n");
+	}
+	if (i == 2) {
+		printf("==========부동산==========\n");
+	}
+
+}

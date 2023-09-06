@@ -15,24 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="menu.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="file.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="struct1.c">
+    <ClCompile Include="sort1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="file2.c">
+    <ClCompile Include="sort2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="menu.c">
+    <ClCompile Include="sort3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="sort5.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

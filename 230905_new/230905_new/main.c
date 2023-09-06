@@ -27,7 +27,8 @@ int main()
 	font_color(LIGHT_GREEN);
 	set_cursor_type(NORMAL_CURSOR);
 	while (1) {
-		switch (main_menu()) {
+		int m = main_menu();
+		switch (m) {
 		case MAIN_RAND_INS: {
 			ADDR ad[RAND_SIZE] = { 0 };
 			int len = sizeof(ad) / sizeof(ADDR); // 배열 크기
