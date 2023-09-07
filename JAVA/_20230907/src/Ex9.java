@@ -1,6 +1,9 @@
 public class Ex9 {
     public static void main(String[] args) {
-        String go = a;
+        String over = "a";
+        String overing = "b";
+        String overing2 = "c";
+
 
     }
 }
