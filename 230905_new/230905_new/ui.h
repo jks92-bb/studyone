@@ -7,7 +7,7 @@ typedef enum {
 	NORMAL_CURSOR	// 일반 형태		2
 } CURSOR_TYPE;
 
-typedef enum {
+typedef enum { // 색깔 설정.
 	BLACK,	// 0
 	BLUE,	// 1
 	GREEN,	// 2
@@ -26,9 +26,9 @@ typedef enum {
 	LIGHT_GRAY	// 15
 } FONT_COLOR;
 
-void gotoxy(int x, int y);
-void title();
-void set_cursor_type(CURSOR_TYPE type);
-void font_color(FONT_COLOR color);
+void gotoxy(int x, int y); //좌표 함수.
+void title(); // 타이틀 함수.
+void set_cursor_type(CURSOR_TYPE type); // 커서 타입 함수 사용.
+void font_color(FONT_COLOR color); // 폰트 컬러 함수 사용
 
 #endif

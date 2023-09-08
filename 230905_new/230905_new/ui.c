@@ -3,13 +3,13 @@
 #include <windows.h>
 #include <conio.h>
 
-void gotoxy(int x, int y) {
+void gotoxy(int x, int y) { // 윈도우 콘솔을 이용하여 커서 위치 시키는 함수작성
 	COORD pos = { x, y };
 	// 윈도우 콘솔에서 커서 위치 이동
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
 
-void set_cursor_type(CURSOR_TYPE type) {
+void set_cursor_type(CURSOR_TYPE type) { // 커서 타입 함수.
 	CONSOLE_CURSOR_INFO info = { 0 };
 	switch (type) {
 	case NOCURSOR:
@@ -34,7 +34,7 @@ void font_color(FONT_COLOR color) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
 
-void title()
+void title() // 프로그램 타이틀 함수를 표현.
 {
 	int x = 5;
 	int y = 3;

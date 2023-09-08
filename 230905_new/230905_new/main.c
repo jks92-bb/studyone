@@ -16,10 +16,10 @@
 
 int main()
 {
-	char file[] = "address.bin";
+	char file[] = "address.bin"; //  배열형태의 변수인 file이름은 "address.bin" 작성.
 	srand(time(NULL));	// 랜덤 함수 사용을 위한 시드 설정.
-	font_color(LIGHT_GREEN);
-	set_cursor_type(NOCURSOR);
+	font_color(LIGHT_GREEN); // 폰트 칼라 설정.
+	set_cursor_type(NOCURSOR); // 커서 스타일 설정.
 	title();
 	_getch();
 
