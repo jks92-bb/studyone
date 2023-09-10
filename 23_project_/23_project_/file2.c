@@ -59,30 +59,6 @@ const int amount[] = { 10, 50, 100, 200, 300 };
 const char *name[] = { "김찬수", "이순신", "한지민","오달수" };
 const char* score[] = { "345만원","25만원","70만원", "40만원","20만원" };
 
-int main()
-{
-	title();
-	while (1) {
-		switch (main_menu()) {
-		case 1:
-
-
-		case 2:
-
-		case 4:
-			printf("program exit\n");
-			exit(0);
-			break;
-		}
-
-
-	}
-
-
-}
-
-
-
 
 void title()
 {

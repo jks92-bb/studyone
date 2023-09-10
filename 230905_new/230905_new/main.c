@@ -39,10 +39,10 @@ int main()
 				strcpy(ad[i].tel, tel[rand() % 5]);
 				strcpy(ad[i].email, email[rand() % 5]);
 			}
-			file_write_rand(ad, file, len);
-			printf("랜덤 데이터를 생성중입니다.....\n");
-			Sleep(2000); // sec - ms - us - ns
-			system("pause");
+			file_write_rand(ad, file, len); // 파일에 rand data 쓰여짐.
+			printf("랜덤 데이터를 생성중입니다.....\n"); 
+			Sleep(2000); // sec - ms - us - ns // 버퍼 2초 대기.
+			system("pause"); // 시그널 수신 까지 잠시 대기.
 			break;
 
 		}
