@@ -79,9 +79,9 @@ public class Ex15_1 {
             } //while end
 
             System.out.println("게임 더 하시겠습니까?");
-            ;
+
             System.out.println("0: 종료 1: 재시작");
-            ;
+
             int restart = scanner.nextInt();
             if (restart == 0) {
                 //게임종료

@@ -44,9 +44,13 @@ public class Ex15_2 {
             // 난수 확인.
             System.out.println(randomCnt + "회 :" + num1 + "" + num2 + "" + num3);
 
-            while (true) {
+            for (int i = 1; i < 10; i++) {
+
+                strikeCnt = 0;
+                ballCnt = 0;
+
                 //3개의 정수 받기.
-                System.out.printf("%d 차 게임\n",gameCnt++);
+                System.out.printf("%d 차 게임\n", i);
                 System.out.println("3개의 정수를 입력하시오");
                 chance1 = scanner.nextInt();
                 chance2 = scanner.nextInt();
@@ -70,31 +74,21 @@ public class Ex15_2 {
                     System.out.println("3스트라이크 게임종료");
                     System.out.println(gameCnt + "번 시도하여 맞추셨습니다.");
                     break; //탈출
-                } else {
-                    //하나도 못 맞추는 경우
-                    if (strikeCnt == 0 && ballCnt == 0) {
-                        System.out.println("아웃입니다.");
-                        if(gameCnt++>10){
-                            System.out.println("게임 기회를 초과하였습니다.\n");
-                            break;
-                        }
-                    } else if (gameCnt++ <= 10) {
-                        System.out.printf("%d 스트라이크, %d 볼 \n", strikeCnt, ballCnt);
-                    } else if (gameCnt++ > 10) {
-                        System.out.println("게임 찬스를 초과하였숩나다.\n");
-
-                    }
-                    //스트라이크, 볼 카운트 초기화.
-                    strikeCnt = 0;
-                    ballCnt = 0;
+                } else if (strikeCnt == 0 && ballCnt == 0) {
+                    System.out.println("아웃입니다.");
                 }
+                //하나도 못 맞추는 경우
+                else if (gameCnt++ <= 10) {
+                    System.out.printf("%d 스트라이크, %d 볼 \n", strikeCnt, ballCnt);
+                }
+                //for end
 
-            } //while end
+            }
+            //while end
 
-            System.out.println("게임 더 하시겠습니까?");
-            ;
+            System.out.println("게임 더 하시겠습니까");
             System.out.println("0: 종료 1: 재시작");
-            ;
+
             int restart = scanner.nextInt();
             if (restart == 0) {
                 //게임종료
@@ -103,8 +97,12 @@ public class Ex15_2 {
                 strikeCnt = 0;
                 ballCnt = 0;
                 gameCnt = 0;
+
                 System.out.println("\n== 게임 재시작==\n");
             }
+
         } // 게임 전체 반복 while end
-    } //main 끝
-} // class 종료
+    }//class 끝
+}
+
+
