@@ -3,7 +3,15 @@ public class BankAccount {
 
     private String name;    // 계좌주 성명
 
+    public BankAccount(){
+
+    }
+
     public BankAccount(int balance, String name) {
+        if(balance<0){
+            System.out.println("마이너스 통장 불가");
+            balance = 0;
+        }
         this.name = name;
         deposit(balance);
     }
@@ -14,6 +22,7 @@ public class BankAccount {
         System.out.println(amount + " 원이 입금처리 되었습니다.");
         this.showBalance();
     }
+
 
     //출금
     public void withdraw(int amount) {
