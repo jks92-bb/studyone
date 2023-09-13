@@ -1,19 +1,25 @@
 package com.kb;
 
 //클래스 생성
-public class CompFriend {
-    //생성자 입력
-    private String name;
+public class CompFriend extends Friend {
+    // 멤버변수
+
+
+    // string형 부서
     private String department;
-    private String phone;
+
+
+    // 생성자 - params : 이름 , 부서 , 전화번호.
     public CompFriend(String name, String department, String phone) {// 변수 입력.
-        this.name = name;
+        super(name, phone);
         this.department = department;
-        this.phone = phone;
     }
+
+    // 메소드명 : showinfo()
+    // 기능 : 이름, 부서 , 전화번호
+    @Override
     public void showInfo() { //정보 표현
-        System.out.println("이름 : " + this.name);
+        super.showInfo();
         System.out.println("부서 : " + this.department);
-        System.out.println("전화 : " + this.phone);
     }
 }
