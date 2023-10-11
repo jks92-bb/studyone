@@ -1,0 +1,83 @@
+
+CurrentHp = 현재 체력
+MaxHP = 최대 체력
+CurrentMp = 현재 마나
+MaxMp = 최대 마나
+CurrentExp = 현재 경험치
+MaxExp = 경험치
+Damage = 데미지 : WeaponD
+Defense = 방어구 : Defense
+DefenseD = 데미지 감소
+
+============
+Equipment 장비{
+Weapon
+Defense
+
+}
+=================
+Weapon = 무기
+{
+//Damage = 데미지
+
+Bow = b 활;
+Knife = k 칼
+Hammer = h 망치;
+;
+
+
+
+
+
+]
+================
+
+?인벤토리 구체화.?
+?장비 얻으면 착용?
+?인벤토리 무제한? 
+?장비 판매?
+?????
+-> 장비 진화. 데미지 상승
+
+5레벨로 레벨업 하셨습니다.
+숏 보우가 롱 보우로 진화 하였습니다.
+
+
+===============
+bow = 활
+{
+ 숏 보우 Damge = 3;  Lv1 ~ Lv4
+ 롱 보우 Damge = 4;  Lv5 ~ Lv10
+ 백힐 보우 Damage = 7;  Lv11 ~Lv15;
+ 자이언트 보우 Damage = 12;  Lv16 ~ Lv20;
+ 하이퍼 보우 Damage = 18;  Lv21~Lv25;
+ 어웨이크 보우 Damage = 26;  LV26 ~ LV30;
+
+}
+=====================
+Knife = 칼
+{
+
+
+}
+
+
+
+
+
+
+================
+Defense = 방어구
+{
+
+DefenseD = 데미지감소
+
+}
+
+==================
+
+
+
+
+
+
