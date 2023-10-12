@@ -94,32 +94,55 @@ class User implements Character {
 public class Ex {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        // user 1,2 의 객체 생성
         System.out.println("유저1의 정보를 입력하시오. 공격력, 방어력");
-        User user1 = new User( scanner.nextInt(), scanner.nextInt());
+        User user1 = new User(scanner.nextInt(), scanner.nextInt());
         System.out.println("유저2의 정보를 입력하시오. 공격력, 방어력");
-        User user2 = new User( scanner.nextInt(), scanner.nextInt());
+        User user2 = new User(scanner.nextInt(), scanner.nextInt());
 
-        boolean playerTurn = true;
-        while (user1.getHp() > 0 && user2.getHp() > 0 && user1.getMp() > 0 && user2.getMp() > 0) {
 
-            if (playerTurn) {
+        int turn = 1; // 유저1의 턴
+        //boolean playerTurn = true; // 유저 턴
+        while (user1.getHp() > 0 && user2.getHp() > 0 && user1.getMp() > 0 || user2.getMp() > 0) {
+
+
+            //방법 2
+            if (turn == 1) {
                 System.out.printf("유저 1 :");
                 user1.attack();
                 System.out.printf("유저 2: ");
                 user2.minus(user1.getHit());
                 System.out.println();
-
-
+                turn = 2;   // 유저 2턴으로 교체
             } else {
+
                 System.out.printf("유저 2 :");
                 user2.attack();
                 System.out.printf("유저 1 :");
                 user1.minus(user2.getHit());
                 System.out.println();
+                turn = 1;    // 유저 1턴으로 교체
             }
 
-            //턴 체인지
-            playerTurn = !playerTurn;
+//              방법1
+//            if (playerTurn) {
+//                System.out.printf("유저 1 :");
+//                user1.attack();
+//                System.out.printf("유저 2: ");
+//                user2.minus(user1.getHit());
+//                System.out.println();
+//
+//
+//            } else {
+//                System.out.printf("유저 2 :");
+//                user2.attack();
+//                System.out.printf("유저 1 :");
+//                user1.minus(user2.getHit());
+//                System.out.println();
+//            }
+//
+//            //턴 체인지
+//            playerTurn = !playerTurn;
 
         }
         if (user1.getHp() > user2.getHp()) {
