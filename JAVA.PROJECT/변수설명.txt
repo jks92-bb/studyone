@@ -1,3 +1,19 @@
+=====================
+
+설계 방안.
+1. 각 직업별로 초기 체력, 마나 , 데미지 다르게 설정을 하는 것.
+2. 모든 직업 초기 체력,마나, 데미지 동일하게 지정 후 직업별 레벨 업에 따른
+ (무기 진화로 데미지 차별, 방어구 데미지감소 상승, 체력 상승, 마나 상승)
+
+
+
+====================
+
+
+
+
+
+
 
 CurrentHp = 현재 체력
 MaxHP = 최대 체력
@@ -8,6 +24,23 @@ MaxExp = 경험치
 Damage = 데미지 : WeaponD
 Defense = 방어구 : Defense
 DefenseD = 데미지 감소
+
+
+================
+Job 직업
+
+{
+Warrior = 전사 
+Archer = 궁수
+Magician = 마법사
+ Thief = 도적
+
+마검사(히든) = MagicWarrior
+
+}
+========================
+
+
 
 ============
 Equipment 장비{
@@ -44,25 +77,49 @@ Hammer = h 망치;
 
 
 ===============
-bow = 활
+Bow = 활
 {
- 숏 보우 Damge = 3;  Lv1 ~ Lv4
- 롱 보우 Damge = 4;  Lv5 ~ Lv10
- 백힐 보우 Damage = 7;  Lv11 ~Lv15;
- 자이언트 보우 Damage = 12;  Lv16 ~ Lv20;
- 하이퍼 보우 Damage = 18;  Lv21~Lv25;
- 어웨이크 보우 Damage = 26;  LV26 ~ LV30;
+ 숏 보우(ShortBow) Damge = 4;  Lv1 ~ Lv4
+ 롱 보우(LongBow) Damge = 5;  Lv5 ~ Lv10
+ 백 보우(BackBow) Damage = 8;  Lv11 ~Lv15;
+ 자이언트 보우(GiantBow) Damage = 14;  Lv16 ~ Lv20;
+ 하이퍼 보우(HyperBow) Damage = 19;  Lv21~Lv25;
+ 어스퀘이크 보우(EarthquakeBow) Damage = 29;  LV26 ~ LV30;
 
 }
 =====================
 Knife = 칼
 {
+ 검 (Sword) Damage = 5;  Lv1 ~ Lv4
+ 
+ 롱 소드(LongSword) Damge = 7;  Lv5 ~ Lv10
+
+ 불의 검 (FireSword) Damage = 14;  Lv11 ~Lv15;
+
+ 용암 검(LavaSword) Damage = 15;  Lv16 ~ Lv20;
+
+ 하이퍼 소드 (HyperSword) Damage = 18;  Lv21~Lv25;
+
+ 혼돈의 검 (ChaosSword) Damage = 30;  LV26 ~ LV30;
 
 
 }
+=======================
+Staff = 지팡이
+{
+
+나무 지팡이 (  WoodStaff) Damage = 7;  Lv1 ~ Lv4
+마법 지팡이 (MagicStaff) Damage = 12;  Lv5 ~ Lv10
+에메랄드 지팡이(EmeraldStaff)  Damage = 17;  Lv11 ~Lv15;
 
 
 
+
+
+
+
+
+}
 
 
 
