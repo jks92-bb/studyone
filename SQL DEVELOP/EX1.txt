@@ -1,0 +1,91 @@
+snack 테이블 생성
+=>과자 이름, 선호도, 가격, 열량
+ CREATE TABLE SNACK(
+ NAME VARCHAR2(20) NOT NULL,
+ PREFERENCE INT NOT NULL,
+ PRICE INT NOT NULL,
+ KCAL INT NOT NULL
+ );
+INSERT INTO snack VALUES (
+    '포카칩',
+    5,
+    1700,
+    300
+);
+
+INSERT INTO snack VALUES (
+    '고구마깡',
+    4,
+    1700,
+    700
+);
+
+INSERT INTO snack VALUES (
+    '감자깡',
+    2,
+    1800,
+    800
+);
+
+INSERT INTO snack VALUES (
+    '새우깡',
+    5,
+    1700,
+    900
+);
+
+INSERT INTO snack VALUES (
+    '꽈배기깡',
+    5,
+    1700,
+    1000
+);
+ 
+ --DROP TABLE SNACK;  
+--  1. 모든 SNACK 데이터 검색하여 출력
+SELECT
+    *
+FROM
+    snack;
+ 
+--2. SNACK 테이블의 데이터 개수 출력(COUNT 함수응용)
+SELECT
+    COUNT(*)
+FROM
+    snack;
+    
+    
+    
+
+--3. 아래에 속하는 데이터를 삭제한 뒤 남아있는 데이터 출력
+--- 가격이 2000원 이상인 과자 데이터 제거
+--- 선호도가 1 이하인 과자 데이터 제거
+--- 열량이 500 이상인 과자 데이터 제거
+
+-- DELETE 삭제 조건문.
+
+
+DELETE FROM snack
+WHERE
+    price >= 2000;
+
+DELETE FROM snack
+WHERE
+    preference <= 1;
+
+DELETE FROM snack
+WHERE
+    kcal >= 500;
+
+--삭제확인
+SELECT
+    *
+FROM
+    snack;
+
+--테이블 모두 삭제
+DROP TABLE snack;  
+
+COMMIT;
+
+
