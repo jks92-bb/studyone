@@ -1,0 +1,7 @@
+INT A = c##SCOTT
+
+
+INT* EX1= &A;
+INT* MYTEST= &A;
+INT* SYSTEM= &A;
+INT* PTRD = &A;

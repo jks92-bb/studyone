@@ -1,0 +1,149 @@
+DROP TABLE KBSTUDENT;
+
+CREATE TABLE KBSTUDENT(
+HAKBEON VARCHAR2(10) PRIMARY KEY,
+NAME VARCHAR2(100),
+HAKGWA_CODE CHAR(3)
+);
+
+INSERT INTO KBSTUDENT VALUES('1', '이동준','001');
+INSERT INTO KBSTUDENT(NAME, HAKGWA_CODE, HAKBEON) VALUES ('유지웅','002','2');
+INSERT INTO KBSTUDENT(HAKBEON, HAKGWA_CODE) VALUES('3','003'); --이름을 생략해 봄
+
+SELECT * FROM KBSTUDENT;
+
+UPDATE KBSTUDENT SET NAME='이유나' WHERE HAKBEON='3'; --나중에 UPDATE문으로 이름을 추가함
+
+
+
+SELECT * FROM DJSTUDENT;
+SELECT * FROM KBMAJOR;
+SELECT * FROM KBSTUDENT; --외래키를 추가함. 참고할 테이블은 KBMAJOR의 CODE
+
+-- 전공테이블의 CODE를 "참조"하여서 학생 테이블의 데이터를 관리하겠다는 의미
+-- 전공테이블에 없는 전공은 추가할 수가 없다.
+ALTER TABLE KBSTUDENT ADD CONSTRAINT FK_CODE FOREIGN KEY(HAKGWA_CODE) REFERENCES KBMAJOR(CODE);
+
+INSERT INTO KBSTUDENT VALUES('4', '정용억', '001'); --OK
+INSERT INTO KBSTUDENT VALUES('5', '홍주환', '111'); --학과코드가 111인 과는 현재 없는 상태
+
+INSERT INTO KBMAJOR VALUES('004', '경영');
+INSERT INTO KBSTUDENT VALUES('5', '권병진', '004');
+
+
+--JOIN
+-- 두 개 이상의 테이블을 공통된 열(COLUMN)로 묶는다.
+--KBSTUDENT.NAME = 학생 테이블의 이름
+--KBMAJOR.NAME = 전공 테이블의 이름
+SELECT HAKBEON, KBSTUDENT.NAME, KBMAJOR.NAME FROM KBSTUDENT JOIN KBMAJOR 
+ON kbstudent.hakgwa_code=KBMAJOR.CODE;
+
+-- 만약 학 번 이런식으로 할 거라면 큰 따옴표로 입력하면 됨
+SELECT HAKBEON "학 번", KBSTUDENT.NAME 학생이름, KBMAJOR.NAME 학과명 
+FROM KBSTUDENT JOIN KBMAJOR 
+ON kbstudent.hakgwa_code=KBMAJOR.CODE;
+
+-- WHERE을 이용한 JOIN문, 두 테이블을 콤마(,)로 묶고, WHERE문을 사용함
+SELECT HAKBEON 학번, KBSTUDENT.NAME 학생이름, KBMAJOR.NAME 학과명 
+FROM KBSTUDENT, KBMAJOR 
+WHERE kbstudent.hakgwa_code=KBMAJOR.CODE;
+
+
+===================================================================
+
+
+--1. DJStudent 테이블 만들기
+--학번, 이름, 학과명을 저장함 (모두varchar2로 할것)
+CREATE TABLE DJStudent(
+ HAK_BUN VARCHAR2(20),
+ NAME VARCHAR2(10),
+ MAJOR VARCHAR2(40)
+);
+
+--KBMajor 테이블이 있으면 삭제.
+--DROP TABLE KBMajor;
+--2. KBMajor 테이블 만들기
+--학과코드char3 학과명 varchar2
+CREATE TABLE KBMajor(
+ MAJOR_CODE CHAR(3) PRIMARY KEY,
+ MAJOR VARCHAR2(100)
+);
+
+--3. KBStudent 테이블 만들기
+--학번 이름 학과코드char3
+CREATE TABLE KBStudent(
+ HAK_BUN VARCHAR2(20),
+ NAME VARCHAR2(10),
+ MAJOR_CODE CHAR(3)
+);
+
+--1,2,3 에 각각 예시 테이터 5개 이상 추가하기.
+INSERT INTO DJStudent VALUES('1','김철수','경영학과');
+INSERT INTO DJStudent VALUES('2','이철수','간호학과');
+INSERT INTO DJStudent VALUES('3','정철수','물리학과');
+INSERT INTO DJStudent VALUES('4','이학수','기계자동차공학과');
+INSERT INTO DJStudent VALUES('5','오나라','수학과');
+
+COMMIT;
+
+INSERT INTO KBMajor VALUES('111','경영학과');
+INSERT INTO KBMajor VALUES('222','간호학과');
+INSERT INTO KBMajor VALUES('333','물리학과');
+INSERT INTO KBMajor VALUES('444','기계자동차공학과');
+INSERT INTO KBMajor VALUES('555','수학과');
+
+COMMIT;
+
+INSERT INTO KBStudent VALUES('6','이하나','111');
+INSERT INTO KBStudent VALUES('7','김하나','222');
+INSERT INTO KBStudent VALUES('8','신세경','333');
+INSERT INTO KBStudent VALUES('9','심은진','444');
+INSERT INTO KBStudent VALUES('11','고윤정','555');
+
+COMMIT;
+
+UPDATE KBStudent SET NAME = '이유나' WHERE hak_bun = '6';
+
+SELECT *FROM DJStudent;
+SELECT *FROM KBMajor;
+SELECT *FROM KBStudent;
+
+
+-- 전공테이블의 CODE를 참조 하여서 학생 테이블의 데이터를 관리하겠다는 의미
+-- 전공테이블에 없는 전공은 추가할 수 없다.
+ALTER TABLE KBStudent ADD CONSTRAINT FK_CODE FOREIGN KEY(MAJOR_CODE) REFERENCES KBMajor(MAJOR_CODE);
+
+INSERT INTO KBStudent VALUES('4','김창우','222'); --OK
+INSERT INTO kbstudent VALUES('2','한국인','884'); -- 메이저코드가 884인 현재 없는 상태.
+
+INSERT INTO KBMajor VALUES('004','경영');
+INSERT INTO KBStudent VALUES('5','권영진','004');
+
+--JOIN
+-- 두 개 이상의 테이블을 공통된 열(COLUMN)로 묶는다.
+
+SELECT HAK_BUN, KBStudent.NAME, KBMajor.MAJOR FROM KBStudent JOIN KBMajor 
+ON kbstudent.major_code = KBMAJOR.MAJOR_CODE;
+
+SELECT HAK_BUN "학 번", KBStudent.NAME 학생이름 ,KBMajor.MAJOR 학과명
+FROM KBStudent JOIN KBMajor
+ON kbstudent.major_code = KBMAJOR.MAJOR_CODE;
+
+--WHERE을 이용한 JOIN문, 두 테이블을 콤마(,)로 묶고, WHERE문을 사용함.
+SELECT HAK_BUN 학번, KBSTUDENT.NAME 학생이름, kbmajor.major 학과명
+FROM KBSTUDENT, KBMAJOR
+WHERE kBSTUDENT.MAJOR_CODE= KBMajor.MAJOR_CODE;
+-- 질의 결과에 학번에서 11이나 10 이런게 내림차순으로 했을시 왜 맨 밑에 뜨냐면 VARCHAR2로 했으니까 문자열이므로 맨처음 문자를 사전식으로 
+-- 읽어들임으로 인해 맨처음 내림순으로 읽는 다는 의미로 맨 아래에 위치한다.
+--MAJOR에 있는 MAJOR_CODE가 기본키(PRIMARYKEY)이었어야 지금 이렇게 관계를 해서 사용가능함.
+
+
+COMMIT;
+--DROP TABLE DJStudent;
+--DROP TABLE KBMajor;
+--DROP TABLE KBStudent;
+
+
+
+
+
