@@ -1,0 +1,89 @@
+-- 프로시저 : 함수와 유사, DB에서 실행할 수 있는 코드 블런
+-- 프로그래밍 논리 수행 가능
+
+-- 프로시저 선언 방식
+-- OR REPLACE 안 쓰면, 동일한 이름의 프로시저 사용이 불가.
+--CREATE OR REPLACE PREOCEDURE 프로시저명
+--(
+-- 매개변수 (IN, OUT, INOUT)
+--)
+--IS
+--변수선언
+--BEGIN 
+--프로시저 본문
+--END 프로시저명;
+
+-- 사원 테이블 생성
+CREATE TABLE EMPLOYEE(
+    NUM VARCHAR2(10) PRIMARY KEY,  -- 기본키 설정
+    NAME VARCHAR2(20),
+    AGE INT,
+    DEPART VARCHAR2(5)
+);
+
+--DROP TABLE EMPLOYEE;
+    
+--부서 테이블 생성
+CREATE TABLE DEPART(
+    DEPART_NUM VARCHAR2(5),
+    NAME VARCHAR2(20),
+    CONSTRAINT PK_NUM PRIMARY KEY(DEPART_NUM) 
+     --제약조건 PK_NUM으로 인해, DEPART_NUM 이 기본키가 됌.
+);
+
+--drop table depart;
+
+-- EMPLOYEE 의 DEPART -> DEPART의 DEPART_NUM으로 참조. (제약조건 추가)
+ALTER TABLE EMPLOYEE ADD CONSTRAINT FK_CODE
+FOREIGN KEY(DEPART) REFERENCES DEPART(DEPART_NUM);
+
+-- 사원에 대한 데이터 추가
+-- INSERT문으로 데이터 추가를 해왔으나, 프로시저를 구현해서 사용
+-- 프로시저 호출-> exec 프로시저명(정보1, 정보2,...);
+EXEC ADD_DEPART('1','교무부');
+EXEC ADD_DEPART('2','교무지원부');
+EXEC ADD_DEPART('3','경영지원부');
+exec add_emplo('525','이유나',24,'1');
+exec add_emplo('526','김하나',29,'1');
+exec add_emplo('123','정유나',34,'2');
+exec add_emplo('456','신세나',40,'2');
+exec add_emplo('457','정우성',41,'3');
+exec add_emplo('458','고창식',33,'3');
+exec add_emplo('124','유지나',28,'2');
+exec add_emplo('777','정아람',32,'1');
+
+-- 조인 : 2개이상의 테이블을 공통된 열로 묶는다.
+SELECT *FROM DEPART;
+SELECT *FROM EMPLOYEE;
+
+
+SELECT * 
+FROM EMPLOYEE E JOIN DEPART D
+ON E.DEPART = D.DEPART_NUM;
+
+SELECT NUM 사원번호, EMPLOYEE.NAME 이름, AGE 나이, DEPART.NAME 부서 FROM DEPART, EMPLOYEE WHERE EMPLOYEE.DEPART = depart.depart_num;
+
+-- EMPLOYEE 테이블의 데이터 추가 수행하는 프로시저 선언
+--CREATE OR REPLACE PROCEDURE add_emplo
+--(
+--    input_num in varchar2, -- in앞에 한번만해도 밑에 in 안적어도 in으로 반영됌.
+--    input_name varchar,
+--    input_age in int,
+--    input_depart in varchar2
+--    
+--)
+--is begin
+--    insert into employee values(input_num,input_name,input_age,input_depart);
+--end add_emplo;
+
+-- depart 테이블의 데이터 추가 수행하는 프로시저 작성.
+--create or replace procedure add_depart
+--(
+--    input_num in varchar2,
+--    input_name in varchar2
+--)
+--is begin
+--    insert into depart values(input_num, input_name);
+--end add_depart ;
+
+

@@ -5,6 +5,7 @@
 --VIEW = SELECT 결과물
 -- SELECT 문이 너무 복잡해지거나 혹은 좀 자주 쓰이는 SELECT문을 좀 더 편하게 불러오고자 쓰는 것.
 -- 기본 용도 자체가 데이터를 '보기 위함'
+-- 가상열 사용불가. 없는 칼럼에 대해서는 추가 수정 삭제 안된다.
 
 CREATE VIEW MYSTUDENT AS
 SELECT HAK_BUN , KBSkbstudent.name NAME,KBMajor.MAJOR 학과 FROM KBSTUDENT 
