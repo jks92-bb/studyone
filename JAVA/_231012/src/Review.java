@@ -92,7 +92,9 @@ class User implements Character {
 
     }
 
-
+    public String getName() {
+        return name;
+    }
 }
 
 
@@ -137,10 +139,10 @@ public class Review {
         
         // user 전투 결과
         if (user1.getHp() > user2.getHp()) {
-            System.out.println("유저 1승리");
+            System.out.println(user1.getName()+"승리");
 
         } else if (user2.getHp() > user1.getHp()) {
-            System.out.println("유저 2승리");
+            System.out.println(user2.getName()+"승리");
 
         } else if (user1.getHp() == user2.getHp()) {
             System.out.println("무승부");
