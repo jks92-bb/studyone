@@ -1,0 +1,9 @@
+-- CATEGORY 테이블 데이터 추가/ 품목분류코드(CODE), 품목 분류(KIND) 
+INSERT INTO CATEGORY VALUES ('AB01', '간편식사');   
+INSERT INTO CATEGORY VALUES ('AB02', '과자');       
+INSERT INTO CATEGORY VALUES ('AB03', '아이스크림');   
+INSERT INTO CATEGORY VALUES ('AB04', '식품');       
+INSERT INTO CATEGORY VALUES ('AB05', '음료');        
+
+-- CATEGORY 테이블 출력
+SELECT * FROM CATEGORY;
