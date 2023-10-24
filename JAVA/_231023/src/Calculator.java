@@ -85,7 +85,7 @@ public class Calculator extends JFrame {
         setLocationRelativeTo(null);
 
         //사이즈 조절 가능.
-        setResizable(true);
+        setResizable(false);
 
         //창을 닫을 때 실행 중인 프로그램도 같이 종료되도록 함.
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
