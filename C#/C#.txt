@@ -1,0 +1,30 @@
+windows forms .net framework
+콘솔앱 .net framework
+
+닷넷 네트워크 확인
+
+wpf ,unity - c#
+
+시작 프로젝트 구성
+
+
+보기 - 도구상자
+button 
+textbox
+
+버튼 더블클릭
+
+using = java의 import
+namespace = 프로그램
+
+"" 응용 java에도 이용가능.
+
+[] java는 배열선언할때 앞뒤 든 상관없이 다 되었다.
+double[] or
+double or[]
+[] C#은 앞에 있어야 함.
+double[] or
+[] C는 뒤에 있어야 함.
+double or[]
+
+
