@@ -12,14 +12,14 @@ namespace windowsFromsApp2
 {
     public partial class Form1 : Form
     {
-        public List<String> list = new List<String>();      
-          
+        public List<String> list = new List<String>();
+
         public Form1()
         {
             InitializeComponent();
 
-            Random rand = new Random(); 
-            button1.Text = rand.Next(100)+""; //  +"" = ToString()
+            Random rand = new Random();
+            button1.Text = rand.Next(100) + ""; //  +"" = ToString()
             button5.Text = button1.Text;
             button2.Text = rand.Next(100).ToString();
             button6.Text = button2.Text;
@@ -35,14 +35,14 @@ namespace windowsFromsApp2
         {
             list.Add(button1.Text);
             label1.Text = "";
-            foreach(var item in list)
+            foreach (var item in list)
             {
                 label1.Text += item + " ";
             }
 
         }
 
-        
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -80,7 +80,8 @@ namespace windowsFromsApp2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            list.Remove(button5.Text);
+           // list.Remove(button5.Text);
+            list.Remove((sender as Button).Text);
             label1.Text = "";
             foreach (var item in list)
             {
