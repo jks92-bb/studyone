@@ -18,10 +18,10 @@ namespace practice231030_1
             InitializeComponent();
             label1.Text = "label1";
             texts.Add("안녕하세요.");
-            texts.Add("aaa.");
-            texts.Add("sss.");
-            texts.Add("ddd.");
-            texts.Add("안ffff녕하세요.");
+            texts.Add("환영합니다..");
+            texts.Add("좋습니다.");
+            texts.Add("축하드립니다.");
+            texts.Add("평안한 되십시오.");
 
         }
 

@@ -12,14 +12,12 @@ namespace practice231030_1
 {
 
 
-    
-
     public partial class Form1 : Form
     {
-     
+
 
         #region student
-             
+
 
         public Form1()
         {
@@ -63,10 +61,10 @@ namespace practice231030_1
             }
 
             #endregion
-                                  
-         
+
+
         }
-              
+
 
         private void button1_Click(object sender, EventArgs e)
         {
