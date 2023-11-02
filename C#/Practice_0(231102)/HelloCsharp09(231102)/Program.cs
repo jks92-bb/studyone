@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Practice_231101_
+namespace HelloCsharp09_231102_
 {
     internal static class Program
     {
@@ -17,8 +17,6 @@ namespace Practice_231101_
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            Application.Run(new Form2());
-            
         }
     }
 }
