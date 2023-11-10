@@ -45,6 +45,7 @@ namespace ParkingCarManager_231107_
         //Save("1","11","111","1111",true) // 출차
         //Save("1",null,null,null,true) // 출차
 
+        #region 세이브
         public static void Save(string ps, string carnumber,
             string driverName, string phoneNumber, bool isRemove = false)
         {
@@ -57,6 +58,8 @@ namespace ParkingCarManager_231107_
 
             }
         }
+        #endregion
+
         //주차공간 추가 삭제용 Save
         public static bool Save(string cmd, string ps, out string contents)
         {

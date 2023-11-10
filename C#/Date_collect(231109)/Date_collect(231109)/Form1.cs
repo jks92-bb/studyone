@@ -26,17 +26,17 @@ namespace Date_collect_231109_
 
         }
 
-        
 
-        
+
+
         #region 블로그 검색예시 였었음.
-        
+
         //public class APIExamSearchBlog
         //{
 
         //    static void Main(string[] args)
         //    {
-                
+
         //            string query = "네이버"; // 검색할 문자열
         //            string url = "https://openapi.naver.com/v1/search/blog?query=" + query; // JSON 결과
         //                                                                                    // string url = "https://openapi.naver.com/v1/search/blog.xml?query=" + query;  // XML 결과
@@ -106,9 +106,9 @@ namespace Date_collect_231109_
 
 
 
-                
+
         //    }
-            
+
         //}
 
         #endregion

@@ -101,6 +101,7 @@ namespace ParkingCarManager_231107_
             }
         }
         //주차 or출자
+        #region 업데이트 쿼리
         public static void updateQuery(string parkingSpot, string carNumber,
             string driverName, string phoneNumber, bool isRemove)
         {
@@ -127,7 +128,7 @@ namespace ParkingCarManager_231107_
                 {
                     sql = $"update{TABLENAME} set carnumber =@p1," +
                         $"drivername =@p2,phonenumber=@p3," +
-                        $"parkingtime =@p4 where " + // where 아ㅠ뒤 띄어쓰기 주의
+                        $"parkingtime =@p4 where " + // where 뒤 띄어쓰기 주의
                         $"parkingspot =@p5";
                     cmd.Parameters.AddWithValue("@p1", carNumber);
                     cmd.Parameters.AddWithValue("@p2", driverName);
@@ -146,6 +147,7 @@ namespace ParkingCarManager_231107_
             }
             finally { conn.Close(); }
         }
+        #endregion
         //주차 공간 추가/삭제에 쓰일 쿼리문
         private static void executeQuery(string ps, string cmd)
         {
