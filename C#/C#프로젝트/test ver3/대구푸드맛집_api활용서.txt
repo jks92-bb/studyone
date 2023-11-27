@@ -1,0 +1,51 @@
+대구푸드 API 정보(대구푸드 맛집정보)
+
+https://www.daegufood.go.kr/kor/api/ajax.html?mode=json&addr=중구
+
+parameter의 각 역할 설명
+' 필수 파라미터
+' mode: json
+' addr : 지역(중구,동구,남구 등등), 
+
+
+'선택 파라미터
+
+
+
+위의 URL에 각 parameter를 전송 하게 되면  각 항목에 맞는 데이터가 json 형식으로 리턴 됩니다.
+
+1차
+status : 상태값 (DONE 리턴)
+total : 총 데이터수
+
+2차(배열)
+data -> cnt, OPENDATA_ID, GNG_CS, FD_CS, BZ_NM, TLNO, MBZ_HR, SEAT_CNT, PKPL, HP, PSB_FRN, BKN_YN, 
+INFN_FCL, BRFT_YN, DSSRT_YN, MNU, SMPL_DESC, SBW, BUS
+
+
+cnt: 순번
+OPENDATA_ID : 고유 번호
+GNG_CS : 주소
+FD_CS : 음식카테고리
+BZ_NM : 음식점명
+TLNO : 연락처
+MBZ_HR : 영업시간
+SEAT_CNT : 좌석수
+PKPL : 주차장
+HP : 웹사이트
+PSB_FRN : 가능언어
+BKN_YN : 예약가능여부
+INFN_FCL : 놀이시설여부
+BRFT_YN : 조식여부
+DSSRT_YN : 후식여부
+MNU : 메뉴
+SMPL_DESC : 설명
+SBW : 지하철 오시는길
+BUS : 버스 오시는길
+
+
+
+
+
+
+
