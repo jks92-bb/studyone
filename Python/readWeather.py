@@ -12,8 +12,8 @@ rc('font', family=font_name)
 
 url = 'http://apis.data.go.kr/1360000/AsosDalyInfoService/getWthrDataList'
 params ={'serviceKey' : '5yc3PHYWjB8vIqrwOK/TSWcKHhDYNacfLGjFQE+SPWmXTBg0vuZV/WkCQ/wJGV4rA6ch7QFRJe8nLu5UZEhHDQ==',
-         'pageNo' : '1', 'numOfRows' : '10', 'dataType' : 'XML', 'dataCd' : 'ASOS', 'dateCd' : 'DAY', 'startDt' : '20221201',
-         'endDt' : '20221231', 'stnIds' : '143' }
+         'pageNo' : '1', 'numOfRows' : '10', 'dataType' : 'XML', 'dataCd' : 'ASOS', 'dateCd' : 'DAY', 'startDt' : '20231201',
+         'endDt' : '20231203', 'stnIds' : '143' }
 
 response = requests.get(url, params=params)
 xmldatas = elemTree.fromstring(response.text)
@@ -78,11 +78,6 @@ conn.close()
 # avg_temps = [row[2] for row in result]  # avgTa 컬럼
 # max_temps = [row[3] for row in result]  # maxTa 컬럼
 # min_temps = [row[4] for row in result]  # minTa 컬럼
-
-
-
-
-
 
 #차트 생성
 plt.figure(figsize=(10, 6))

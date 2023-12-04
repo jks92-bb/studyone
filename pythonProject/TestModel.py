@@ -13,10 +13,11 @@ from tensorflow.keras import preprocessing
 train_file = "chatbot_data.csv"
 data = pd.read_csv(train_file,delimiter=',')
 features = data['Q'].tolist()
+gogo = data['A'].tolist()
 
 q = input()
 features.append(q)
-
+gogo.append(q)
 #2 단어 인덱스 시퀀스 벡터
 corpus = [preprocessing.text.text_to_word_sequence(text) for text in features]
 
@@ -38,7 +39,6 @@ print(corpus[len(features)-1]) # ['다', '괜찮은', '줄', '알았는데']
 print(sequences[len(features)-1]) #[28, 242, 85, 118]
 print(padded_seqs[len(features)-1]) #[ 28 242  85 118   0   0   0   0   0   0   0   0   0   0   0]
 
-
 predict = model.predict(padded_seqs[picks])
 predict_class = tf.math.argmax(predict, axis=1)
 
@@ -47,6 +47,7 @@ emotions = {0:"보통", 1:"부정", 2:"긍정"}
 print('감정 예측 점수 : ', predict)
 print('감정 예측 클래스 : ' , predict_class.numpy())
 print('감정 : ' , emotions[predict_class.numpy()[0]])
+print('대답:',    )
 
 #너무우울해 1
 #안녕하세요 0

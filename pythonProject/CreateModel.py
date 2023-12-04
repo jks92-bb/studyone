@@ -13,7 +13,7 @@ train_file = "chatbot_data.csv"
 data = pd.read_csv(train_file, delimiter=',') # 판다스로 csv 파일을 읽는다.
 features = data['Q'].tolist() #Q 부분만 리스트로 변환
 labels = data['label'].tolist()#label(감정) 부분만 리스트로 변환 0:일상다반사, 1:이별(부정), 2:사랑(긍정)
-
+gogo = data['A'].tolist()
 #2 단어 인덱스 시퀀스 벡터
 # corpus : 말뭉치
 # preprocessing.text.text_to_word_sequence(text)
