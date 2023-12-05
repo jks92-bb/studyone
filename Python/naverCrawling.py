@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import urllib
 import ssl
+import random
+
 
 #날씨 정보 입력받기
 city = input("지역을 치시오. :")
@@ -14,64 +16,58 @@ soup = BeautifulSoup(webpage, 'html.parser')
 
 #날씨 정보 추출
 temps = soup.find('div','temperature_text')
+c_temp = soup.find('strong',{'class':''}).text
 summary = soup.find('p','summary')
+misegroup = soup.find('div',{'class':'report_card_wrap'})
+mise2 = misegroup.findAll('li')
+#pprint(mise2)
+#print(len(mise2))
+
+# 온도 정보에서 숫자와 소수점만 추출하여 temperature 변수에 저장
+temperature = ''.join(filter(lambda x: x.isdigit() or x == '.', c_temp))
+#print(temperature)
+
+# 추출한 온도 문자열을 실수형으로 변환
+temperatures = float(temperature)
+#날씨 정보 변수 초기화
+weather =''
+
+# 계절 설정
+if( 7 < temperatures <20):
+    # 랜덤으로 '가을' 또는 '봄' 선택
+    weather = random.choice(['가을', '봄'])
+    print(weather)
+elif (temperatures <= 7):
+    weather = '겨울'
+    print(weather)
+elif (temperatures >= 20):
+    weather = '여름'
+    print(weather)
+
+
+
+
 
 #결과 출력
-
-print(f'{city} 날씨 정보:')
+print(f'{city} 날씨 정보')
 if temps:
     print(f'온도: {temps.text.strip()}')
+
 else:
     print('온도 정보를 찾을 수 없습니다.')
-
 if summary:
     print(f'날씨 상태: {summary.text.strip()}')
 else:
     print('날씨 상태 정보를 찾을 수 없습니다.')
+#미세먼지, 초미세먼지, 자외선, 일몰 긁어오기.
+print('--------------------------------')
+for item in mise2:
+    #print("!")
+    title = item.find('strong',{'class':'title'}).text
+    contents = item.find('span',{'class':'txt'}).text
+    print(title+":"+contents)
+    #print("!")
 
-# print(temps)
-# print(city +temps.text.strip())
-# # print(summary)
-# print(summary.text.strip())
-
-
-
-'''
-def get_weather_info(city):
-    # 네이버 날씨 페이지 URL
-    url = f'https://search.naver.com/search.naver?query={city}+날씨'
-
-    # 적절한 User-Agent 헤더 추가
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
-
-    # 요청을 보내고 HTML 응답을 받음
-    response = requests.get(url, headers=headers)
-
-    # 응답이 성공적인지 확인
-    if response.status_code == 200:
-        # BeautifulSoup을 사용하여 HTML 파싱
-        soup = BeautifulSoup(response.text, 'html.parser')
-
-        # 지역 날씨 정보 추출
-        temperature_element = soup.select_one('.todaytemp')
-
-        # 엘리먼트가 찾아졌는지 확인한 후에 text 속성에 접근
-        if temperature_element:
-            temperature = temperature_element.text
-            weather_condition = soup.select_one('.cast_txt').text
-
-            # 결과 출력
-            print(f'{city} 날씨 정보:')
-            print(f'온도: {temperature}℃')
-            print(f'날씨 상태: {weather_condition}')
-        else:
-            print(f'온도 정보를 찾을 수 없습니다.')
-    else:
-        print(f'오류 발생: {response.status_code}')
-
-# 사용자가 원하는 지역으로 변경
-city_to_search = '서울'
-
-# 날씨 정보 가져오기
-get_weather_info(city_to_search)
-'''
+print('--------------------------------')
+# if misegroup:
+#     print(f'{misegroup.text.strip()}')
