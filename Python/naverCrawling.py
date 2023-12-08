@@ -25,7 +25,7 @@ mise2 = misegroup.findAll('li')
 
 # 온도 정보에서 숫자와 소수점만 추출하여 temperature 변수에 저장
 temperature = ''.join(filter(lambda x: x.isdigit() or x == '.', c_temp))
-#print(temperature)
+print(temperature)
 
 # 추출한 온도 문자열을 실수형으로 변환
 temperatures = float(temperature)
@@ -43,10 +43,6 @@ elif (temperatures <= 7):
 elif (temperatures >= 20):
     weather = '여름'
     print(weather)
-
-
-
-
 
 #결과 출력
 print(f'{city} 날씨 정보')
