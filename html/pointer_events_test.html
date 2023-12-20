@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .interactive-box {
+            width: auto;
+            height: fit-content;
+            background-color: lightblue;
+            border: 1px solid #333;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            
+        }
+        .fluid-text {
+            font-size: 5vw; /* 글자 크기를 뷰포트의 너비에 상대적으로 조절 */
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #333;
+            margin: 20px;
+        }
+        
+
+        .no-pointer-events {
+            pointer-events: none;
+            background-color: lightgray;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <div class="interactive-box fluid-text" onclick="openGoogle()">googleBox</div>
+    
+
+    <div class="interactive-box no-pointer-events" onclick="alert('Non-interactive Box')">Non-interactive Box</div>
+    <script>
+        function openGoogle(){
+            window.open('https://www.google.com','_blank')
+        }
+    </script>
+</body>
+</html>
