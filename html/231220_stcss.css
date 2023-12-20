@@ -1,0 +1,34 @@
+/*
+css주석
+css 파일은 화면 디자인을 담당한다.
+css 파일에 작성된대로 규칙적으로 html 파일을 작성했다면,
+여러 html 파일에 대해서 하나의 css 파일로 통일적으로 스타일 적용이 가능
+*/
+
+/*
+선택자 :: 특정 조건에 맞는 태그를 선택하는 구문
+    => 여러개를 복합적으로 작성가능, 여러 태그들을 나열해서 작성할 수 있음
+선언문 :: 적용할 스타일 정의
+태그명 {
+    속성명1 : 속성값1;  -> 선언문1
+    속성명2 : 속성값2;  -> 선언문2
+    ...
+}
+*/
+
+/*
+css 스타일 적용 방법
+1. 외부 css 파일을 html 파일에 적용
+    <head>에 아래 구문을 작성해야함
+        <link rel = "stylesheet" href="css파일명">
+2. html 내부에 style 적용
+3. 태그에 직접 style 속성 부여
+*/
+
+h1{
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+    border: 3px solid black;
+}
+

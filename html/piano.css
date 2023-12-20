@@ -1,0 +1,66 @@
+/* transition:: "전환"과 관련한 스타일 부여 */
+
+
+div{
+    text-align: center;
+    margin: auto;
+}
+hr{
+    width: 70%
+}
+p{
+    border: 3px solid black;
+    display: inline-block;
+    padding: 5px 25px;
+    height: 200px;
+    background-color: white;
+    transition: all 1s; /*전환과 관련한 모든 진행시간을 1초 지정.*/
+    transition-timing-function: ease-in-out; /*전환 형식:: 디폴트는 liner(일정)한 속도로 변동*/
+    transition-delay: 0.5s; /*0.5초정도 가만히 있다가 전환 수행*/
+
+}
+
+/* 반응 선택자 :: ":active(마우스 클릭할 때 스타일 적용)"
+                 ":hover(커서 올려져있을 때 스타일 적용)" 
+                 [선택자]:hover/active {선언문들}
+                
+*/
+#do:hover{
+    background-color: red;
+    
+
+}
+#re:hover{
+background-color: blue;
+
+}
+#mi:hover{
+    background-color: rgb(41, 133, 214);
+    
+}
+#pa:hover{
+    background-color: rgb(100, 60, 9);
+    
+}
+#sol:hover{
+    background-color: aqua;
+    
+}
+#ra:hover{
+    background-color: brown;
+    
+}
+#si:hover{
+    background-color: chocolate;
+    
+}
+
+p:active{
+    color:white;
+    height: 250px;
+    font-size: larger;
+    
+     
+
+}
+
