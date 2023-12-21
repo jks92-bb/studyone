@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화 수락/거절</title>
+    <style>
+        @keyframes moveAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            25%, 75% {
+                transform: translateY(-100px);
+            }
+            50% {
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .call {
+            animation: moveAnimation 3s ease-in-out infinite;
+            width: 200px;
+            position: relative;
+            margin: 0 50px;
+        }
+
+        #callagree, #callreject {
+            width: 100px;
+            position: relative;
+            animation: moveAnimation 3s ease-in-out infinite;
+        }
+
+        #box1, #box2 {
+            text-align: center;
+        }
+
+        @keyframes moveLeftRightAnimation {
+            0%, 100% {
+                transform: scale(0.4) translateX(0);
+            }
+            25% {
+                transform: scale(0.6) translateX(0);
+            }
+            50% {
+                transform: scale(0.7) translateX(100px);
+            }
+            75% {
+                transform: scale(0.6) translateX(0);
+            }
+            100% {
+                transform: scale(0.4) translateX(0);
+            }
+        }
+
+        @keyframes moveTextAnimation {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(100px);
+            }
+            75% {
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>전화가 왔습니다. 받으시겠습니까?</h1>
+    <hr>
+
+    <div id="box1">
+        <button type="button" class="call" id="movetextcall" onclick="location.href='callagree.html'">전화받기</button>
+        <button type="button" class="call" id="movetextcall2" onclick="location.href='callreject.html'">전화거절</button>
+    </div>
+    <br>
+    <div id="box2">
+        <img id="callagree" src="https://cdn-icons-png.flaticon.com/512/5585/5585856.png" alt="전화받기">
+        <img id="callreject" src="https://cdn-icons-png.flaticon.com/512/4100/4100044.png" alt="전화거절">
+    </div>
+
+    <script>
+        document.getElementById("movetextcall").addEventListener("animationiteration", () => {
+            document.getElementById("callagree").style.animation = "moveLeftRightAnimation 3s ease-in-out infinite";
+        });
+
+        document.getElementById("movetextcall2").addEventListener("animationiteration", () => {
+            document.getElementById("callreject").style.animation = "moveLeftRightAnimation 3s ease-in-out infinite";
+        });
+    </script>
+</body>
+</html>
