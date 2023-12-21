@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 문자 선택자 :: 지정된 태그에 있어서 특정 문자에 스타일 지정 */
+        /* 시작 문자 선택자 :: ::first-letter, ::first-line */
+        p::first-letter{
+            font-size: 200%;
+            color: red;
+        }
+        p::first-line{
+            color: blue;
+        }
+        /* ::selection -> 사용자가 임의로 드래그한 글자 선택 */
+        p::selection{
+            font-size: 300%;
+            background-color: aliceblue;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p>"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle." - Steve Jobs</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti accusamus repellat consequuntur incidunt harum expedita aut blanditiis repudiandae dolore quo. Ex cupiditate est ut accusantium accusamus cum magni suscipit perspiciatis?</p>
+    
+</body>
+</html>

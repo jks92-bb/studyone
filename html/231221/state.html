@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 상태 선택자 :: :checked, :focus, :enabled, :disabled 
+        focus는 enabled 아래로 적용*/
+        
+        input:enabled{
+            background-color: aquamarine;
+        }
+        input:disabled{
+            background-color: gray;
+        }
+        input:focus{
+            background-color: aliceblue;
+        }
+        /* 타입이 체크박스인 input 태크글 체크 했을 떄, div 스타일 정의 */
+        input[type="checkbox"]:checked+div{
+            height: 0px;           
+                               
+        }    
+        div{
+            height: 0px;            
+            overflow: hidden;
+            border: 3px solid black;
+            width: 600px;
+            height: 300px;
+            transition-duration: 1s;
+        }   
+        
+    </style>
+</head>
+<body>
+    <h1>:focus 적용</h1>
+    <input type="text" name="t1" id="t1" >
+    <h1>:enabled 적용</h1>
+    <input type="text" name="t2" id="t2">
+    <h1>:disabled 적용</h1>
+    <input type="text" name="t3" id="t3" disabled>
+    <br>
+    <input type="checkbox">
+    <div>
+        <h1>한국</h1>
+        <h1>일본</h1>
+        <h1>미국</h1>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="231221_review.css">
+    <title>Document</title>
+    <style>
+         label.active-color {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>목차</h1>
+        <p id="first_pTag"class="first pTag">1st p tag</p>
+        <p id="second_pTag" class="second pTag">2nd p tag</p>
+        <p class="third pTag">3nd p tag</p>
+        <p class="fourth pTag">4nd p tag</p>
+        <span>
+            <p>div 바깥의 p 태그</p>
+            <p>div 바깥의 p 태그2</p>
+        <span>
+
+        <input type="checkbox"name="student" value="lee" id="lee">
+        <label for="lee">이창수</label>
+        <input type="checkbox"name="student" value="kim" id="kim">
+        <label for="kim">김창수</label>
+        <input type="checkbox"name="student" value="ji" id="ji">
+        <label for="ji">지창수</label>
+
+
+    </div>
+    <p>div 바깥의 p 태그</p>
+    <p>div 바깥의 p 태그2</p>
+    <script>
+        $(document).ready(function() {
+            $("input[type='checkbox']").click(function() {
+                var label = $(this).next('label');
+                if (this.checked) {
+                    label.addClass("active-color");
+                } else {
+                    label.removeClass("active-color");
+                }
+            });
+        });
+    </script>
+
+    
+</body>
+
+</html>

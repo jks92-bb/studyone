@@ -1,0 +1,74 @@
+/* 
+Css:: 화면 스타일 담당
+선택자 {속성명1: 속성값1; 선언문들..}
+
+1. 내부 Css(<head> 태그 안에 <style> 삽입하여 스타일 적용)
+2. 인라인 Css( 각 태그마다 style 속성을 직접 삽입)
+3. 외부 css( css 파일을 별도로 만들고  html 파일에 적용 -> link 태그 사용)
+=> css적용 순서는 , 위에서 아래 순으로 적용(절차지향)(만약 속성값들끼리 충돌이 생기면.
+아래에서 선언된 값이 적용)
+*/
+
+/* 
+선택자 :: 특정 요소를 선택하는 구문
+ */
+/* 
+*{
+    color: blue;
+    border: 3px solid aliceblue;
+} */
+
+/* id 선택자(#) : 특정 id 값을 갖는 tag선택
+   class  선택자(.) : 특정 클래스 값을 포함하는 tag 선택 */
+ 
+.pTag{
+    border: 3px solid snow;
+}
+/* #first_pTag{
+    background-color: cadetblue;
+} */
+
+/* 속성 선택자
+[속성명] :: 해당속성에 대해 값을 가지고 있는 태그 전체 선택
+[속성명=속성값] :: 특정 속성에 대해 특정 값을 가지 있는 태그 선택
+ */
+ label[for]{
+    color: burlywood;
+
+ }
+ label[for="kim"]{
+    background-color: black;
+ }
+
+ /* 후손 선택자 :: [선택자1] [선택자2] => [선택자1] 아래로 있는 [선택자2] 모두 선택
+ , (직결)자손 선택자 :: [선택자1]>[선택자2] => [선택자1] 바로 아래로 있는 [선택자2] 선택 */
+div p{
+    font-size: 40px;
+}
+div>p{
+    font-style: italic;
+}
+
+ /* 반응 선택자:: :hover, :active */
+ label:hover{
+    border: 2px solid black;
+ }
+ label:active{
+    color: crimson;
+ }
+
+ /* 전환(transition) :: 자연스럽게 전환 스타일 
+  */
+
+  /* 동위 선택자 :: +,~
+  [선택자1] + [선택자2] :: [선택자1] 바로 뒤에 있는 [선택자2]만 선택 
+  => id선택자가 더 상위의 선택자라서 id 선택자가 지정되어 있을시 id 선택자의 명령을 더 상위명령으로 입력받음
+  [선택자1] ~ [선택자2] :: [선택자1] 뒤에 있는 모든 [선택자2]만 선택
+ 
+  
+   */
+
+h1 + p{
+    background-color: chartreuse;
+}
+
