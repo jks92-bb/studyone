@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p>브라우저 창을 늘렸다 줄였다 해보세요</p>
+    <hr>
+
+    <!-- picture 태그 :: srcser, media 속성 -->
+    <!-- src 속성 :: 불러오는 속성/ srcset 속성 :: src 의미 +"set" -->
+    <!-- picture 태그와 source 태그를 함께 사용하여 보여주는 위치는 공유하되, 불러오는 이미지는 
+    조건에 따라 다르게 설정 -->
+    <picture>
+        <!-- 높이의 크기가 300px 이하일 때, 아래 사진을 보여주어라. -->
+        <source srcset="https://m.animalfriends.co.kr/web/product/medium/202212/984e801a558748e04f0e5230f39fc4e5.jpg" 
+        alt="이미지를 불러오지 못하였습니다." media="(max-height:300px)">
+        <!-- 높이 크기가 300px초과일 때 표현됨 -->
+        <source srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/projects/cover_images/166251827391067904.jpg?w=960&h=960&c=c"
+         alt="이미지를 불러오지 못하였습니다." media="(max-height:700px)">
+         <source srcset="https://cdn.pixabay.com/photo/2023/06/14/02/13/ai-generated-8062127_1280.jpg"
+         alt="이미지를 불러오지 못하였습니다." >
+        <img style="width: 500px; height: 400px;">
+        <!-- source 태그들 중 하나는 media 설정을 해주면 안됨 --
+            ->조건에 상관없이 디폴트로 떠야하는 사진 하는 있어야 함>
+
+    </picture>
+
+    
+</body>
+</html>

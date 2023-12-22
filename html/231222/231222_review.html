@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 :: 상태, 링크, 부정, 구조, 문자 */
+        /* 상태 선택자  :: :focus, :enabled,:disabled, :checked */
+        /* :enabled 적용한 후에 :focus 적용해야 스타일 적용 */
+        input:enabled{
+            background-color: aqua;
+        }
+        input:disabled{
+            background-color: darkblue;
+        }
+        input:focus{
+            background-color: bisque;
+            color:crimson
+        }
+        /* 구조 선택자 -> first-child, last-child, first-of-type, last-of-type */
+        /*      공통점 :: 형제 관계(종속 관계x) 상태에서 적용 */
+        /* nth-child(숫자) nth-of-type(숫자) */
+        h2:first-child{
+            background-color: rgb(162, 168, 157);
+        }
+
+        h1:first-of-type{
+            background-color: aqua;
+        }
+        h2:nth-of-type(2){
+            background-color: wheat;
+        }
+        p:nth-last-of-type(2){
+            background-color: gray;
+        }
+
+        /* 부정 선택자-> not(부정하고자 하는 선택자) */
+        /*링크 선택자->:link :visited  */
+        /* :link -> href 속성이 정의되어 있는 a태그 스타일 지정 */
+        a:visited{
+            color: aqua;
+        }
+
+        a:active{
+            color: burlywood;
+            border: 2px solid seagreen;
+        }
+        /* 문자선택자 ->  ::first-letter, ::first-line, ::selection*/
+        p:first-child::first-letter{
+            font-size: 250%;
+            color: white;
+            background-color: black;
+        }
+        p:first-child::first-line{
+            color: red;
+        }
+        p::selection{
+            background-color: antiquewhite;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est sequi consectetur eius praesentium in repellendus recusandae vitae quo possimus impedit repudiandae quasi commodi necessitatibus saepe maxime non, ipsam quam ex.</p>
+
+    <h2>행복</h2>
+    <p>1st 희망</p>
+    <p>2nd 희망</p>
+    <p>3rd 희망</p>
+
+    <h1>일반 입력칸</h1>
+    <input >
+    <h1>disabled 입력칸</h1>
+    <input disabled>
+    <br>
+
+    <h2>행복</h2>
+    <p>1st 희망</p>
+    <p>2nd 희망</p>
+    <p>3rd 희망</p>
+    
+    <a href="https://www.naver.com">네이버</a><br>
+    <a href="https://www.google.com">구글</a>
+    
+</body>
+</html>

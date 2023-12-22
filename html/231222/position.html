@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position 속성 :: 위치, 좌표(x,y축)
+        => 이 속성을 통해서, 요소 위치(좌표값) 부여하는 방법 지정 */
+        /* 
+        position: static(디폴트)
+        웹사이트 상(0,0)부터 시작해서, 요소들을 그냥 붙여둠.(좌표 위치를 조정할 수 없다.)
+        position: relative
+        본래 있어야 할 좌표를(0,0)으로 삼으며, 그 기점으로 좌표 이동
+        position: fixed( 고정적인) -> 부모 태그 눈치를 안봄
+         다른 태그의 위치 상관없이, 브라우저 상 정해진 위치에 있음(스크롤 내려도 픽스)
+        position: absolute(절대적인) -> 부모 태그 안에서만 절대 좌표 갖는다.
+        (스크롤 내리거나 올리면서 부모 태그가 시야 밖에 있다면 같이 없어짐)
+         */
+         div{
+            height: 1000px;
+         }
+
+         
+         p{
+            width: 100px;
+            height: 100px;
+            position: absolute; 
+            /* position: fixed;  */
+
+
+         }
+         #red{background-color: red;
+              left: 50px;
+              top: 50px;}
+         #green{background-color: green;
+                left: 50px;
+                top: -50px;}
+         #blue{background-color: blue;}
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <div>
+    <p id="red"></p>
+    <p id="green"></p>
+    <p id="blue"></p>
+</div>
+</body>
+</html>
