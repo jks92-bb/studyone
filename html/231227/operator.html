@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //산술 연산자 : +,-,*,/,%
+        //대입 연산자 : =
+        //비교 연산자 : < , > , <= ,>=
+        //          ==, != (값이 같다 , 다르다)
+        //          ===, !== (값과 타입이 모두 같다, 값 또는 타입이 다르다)
+        // 논리 연산자 :: &&, ||, !
+        // 삼항 연산자 :: ?(if, else 같이 하는 연산자)
+        let n1 = 100
+        let n2 = 200
+        //[조건식] ? [참일때 수행할 명령어] :[거짓일 때 수행할 명령어]
+        n1>n2?console.log(n1):console.log(n2)
+
+        //typeof():: 특정 값의 자료형 반환
+        let tf = 10*0===0;
+        document.write("n1의 자료형은 "+typeof(n1)+"입니다")
+        document.write(`"10*0===0" 식은 ${typeof(tf)}입니다.`)
+
+        // 강제 형변환(number(), string(), Boolean())
+        let hello = "안녕";     //hello 변수가 자동으로 string형
+        console.log(Boolean(hello))
+        console.log(Number('A')) // Nan ="not a number"
+                               //  -> 숫자 연산이 잘 이루어지지 않았을 때 나타남
+        console.log(typeof(Number('A')))
+
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+</head>
+<body>
+    <!-- 함수를 활용하여 계산기 프로그램을 구현하라.
+    입력은 함수 밖에서 수행하기 (숫자 2개 , 연산자 1개)
+    각 사칙연산(5개)을 수행하는 함수를 구현하고 입력받은 연산자에 따라 함수의 반환값을 받아 출력 수행
+    숫자 2개를 0 0 을 입력받을 때까지 사칙연산 반복 수행
+    (입출력 모두 함수 밖에서 수행하고, 연산만 함수를 통해 수행) -->
+
+    
+    <script>
+        //1. 입력받기 (숫자 2개, 연산자 1개)
+        while(true){
+        let num1 = prompt("첫번째 숫자를 입력해주세요.",0);
+        let num2 = prompt("두 번째 숫자를 입력해주세요,",0);
+        if(num1==="0" && num2==="0"){
+            alert("실행을 종료합니다.");
+            break;
+        }
+        let op = prompt("연산자를 입력해주세요.(+,-,*,/,% 중 하나)");
+        let n1 = Number(num1);
+        let n2 = Number(num2);
+
+        //2. 연산 수행
+        let result;
+        switch(op){
+            case '+':
+                result=add(n1,n2);
+                break;
+            case '-':
+                result=sub(n1,n2);
+                break
+            case '*':
+                result=mul(n1,n2);
+                break;
+            case '/':
+                result=div(n1,n2);
+                break;
+            case '%':
+                result=rest(n1,n2);
+                break;
+            default:
+                alert("연산자를 잘못 입력하셨습니다.\n 처음부터 다시 실행합니다.");
+
+             }
+        
+         // 4. 결과값 출력 수행.
+        alert(`결과값은 ${result}입니다`);
+        console.log(`결과값은 ${result}입니다`)
+     }
+     // 3. 함수구현
+     function add(a,b){
+            return a + b;
+        }
+        function sub(a,b){
+            return a-b;
+        }
+        function mul(a,b){
+            return a*b;
+        }
+        function div(a,b){
+            return a/b;
+        }
+        function rest(a,b){
+            return a%b;
+        }
+   
+       
+    
+
+   
+   
+
+    </script>
+
+
+
+    
+</body>
+</html>

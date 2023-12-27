@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 사칙연산 함수
+        function performOperation(a, b, operator) {
+            switch (operator) {
+                case '+':
+                    return a + b;
+                case '-':
+                    return a - b;
+                case '*':
+                    return a * b;
+                case '/':
+                    if (b === 0) {
+                        alert("0으로 나눌 수 없습니다.");
+                        return undefined;
+                    }
+                    return a / b;
+                case '%':
+                    if (b === 0) {
+                        alert("0으로 나눌 수 없습니다.");
+                        return undefined;
+                    }
+                    return a % b;
+                default:
+                    alert("올바른 연산자를 입력하세요.");
+                    return undefined;
+            }
+        }
+
+        // 사용자로부터 입력을 받아 계산을 수행하는 함수
+        function calculate() {
+            // 사용자로부터 숫자와 연산자 입력 받기
+            let num1 = parseFloat(prompt("첫 번째 숫자를 입력하세요:"));
+            let operator = prompt("연산자를 입력하세요 (+, -, *, /, %):");
+            let num2 = parseFloat(prompt("두 번째 숫자를 입력하세요:"));
+
+            // 0 0 입력 시 종료
+            if (num1 === 0 && num2 ===0) {   
+                alert("프로그램을 종료합니다.");
+                return false;            
+            }
+            // 입력이 올바른지 확인
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("올바른 숫자를 입력하세요.");
+                return true;
+            }
+
+            // 계산 수행
+            let result = performOperation(num1, num2, operator);
+            if (result !== undefined) {
+                alert(`결과: ${result}`);
+            }
+
+            return true;
+        }
+        // 계산 반복 수행
+        while (calculate()) {}
+    </script>
+    
+</body>
+</html>

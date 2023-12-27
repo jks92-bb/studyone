@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+        // 배열 :: "여러 개의 값을 하나의 이름으로 저장하는 공간"
+        //      js 같은 경우엔, 자료형의 제약이 없고 공간의 제약 없음
+        //      배열 이름이랑 "이게 배열이다" 라는 것만 명시하면 사용에 지장없음
+
+        // "introduce라는 변수는 배열이다." 라고 선언한 것
+        let introduce = []
+        
+
+        //임의의 위치를 지정해서 값을 넣을 수 있음
+        introduce[1]="apple"
+        console.log(introduce[1])
+        for(let i =0;i<5;i++){
+            introduce[i]=100
+        }
+
+        //push()를 통해서 순차적으로 삽입
+        introduce.push("김씨")
+        introduce.push("22")
+        introduce.push(false)
+
+        // 이름, 나이 , 성별(boolean 타입) 입력받고
+        // 이들을 하나의 배열에 저장한다.
+        // 그리고 배열에 저장된 값들을 순차적으로 html에 출력한다.
+        
+    //     let inset = [];
+
+    // inset[1] = prompt("이름을 입력하세요", "(ex)홍길동");
+    // console.log(typeof inset[1]); // 결과값 string으로 나옴
+    // document.write(`${inset[1]}<br>`);
+
+    // inset[2] = prompt("나이를 입력하세요");
+    // console.log(typeof inset[2]); // 결과값 string으로 나옴
+    // let age = Number(inset[2]); // 입력값을 숫자형으로 바꾸어 새로운 변수에 삽입
+    // console.log(typeof age);
+    // document.write(`${inset[2]}<br>`);
+
+    // inset[3] = confirm("남성이면 확인, 여성이면 취소를 눌러주세요");
+    // document.write(inset[3] ? "남성입니다." : "여성입니다.");
+
+    const getUserInput = (message, defaultValue) => prompt(message, defaultValue);
+
+    const inset = {
+         name: getUserInput("이름을 입력하세요", "(ex)홍길동"),
+         age: Number(getUserInput("나이를 입력하세요")),
+        isMale: confirm("남성이면 확인, 여성이면 취소를 눌러주세요")
+    };
+        const gender = inset.isMale ? "남성" : "여성";        
+
+    document.write(`이름: ${inset.name}<br>나이: ${inset.age}세<br>성별: ${gender}`);
+        
+    // console.log() :: 콘솔창 출력 -개행("\n")
+    // document.write() :: html <br>개행
+
+
+    // 이름, 나이, 성별(boolean타입) 입력받고
+        // 이들을 하나의 배열에 저장한다.
+        // 그리고 배열에 저장된 값들을 순차적으로 html에 출력한다
+
+        //(ex) 이유나 25 입력, "취소" 클릭
+        // 이름: 이유나
+        // 나이: 25세
+        // 성별: 여성
+
+        // 1. 이름, 나이, 성별(boolean타입) 입력
+        // let name=prompt("이름을 입력하세요.", "ex) 홍길동");
+        // let input=prompt("나이를 입력하세요.", 0);      // string형
+        // let age=Number(input);
+        // let tf=confirm("남성이라면 확인, 여성이라면 취소를 눌러주세요.");
+
+        // let gender;
+        // if(tf===true){  // "확인"을 누른 경우
+        //     gender="남성";
+        // }
+        // else{   // tf===false ("취소"를 누른 경우)
+        //     gender="여성";
+        // }
+
+        // // 2. 배열 선언하고, 값을 삽입
+        // let introduce = [];
+        // introduce.push(name);
+        // introduce.push(age);
+        // introduce.push(gender);
+
+        // // 3. 배열값 순차적으로 출력
+        // document.write(`이름: ${introduce[0]}<br>`);
+        // document.write(`나이: ${introduce[1]}<br>`);
+        // document.write(`성별: ${introduce[2]}<br>`);
+
+        // // console.log() :: 콘솔창 출력 - 개행("\n")
+        // // document.write() :: html body 출력 - 개행("<br>")
+
+        
+    </script>
+</body>
+</html>
