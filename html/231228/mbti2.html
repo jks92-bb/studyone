@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mbti2</title>
+</head>
+<body>
+    <form id="">
+        <input type="radio" name = "EI" value="E"id="E">
+        <label for="E">외향적(E)</label>
+        <input type="radio" name = "EI" value="I"id="I">
+        <label for="I">내향적(I)</label><br>
+
+        <input type="radio" name = "SN" value="S"id="S">
+        <label for="S">현실형(S)</label>
+        <input type="radio" name = "SN" value="N"id="N">
+        <label for="N">직관형(N)</label><br>
+
+        <input type="radio" name = "FT" value="F"id="F">
+        <label for="F">감성적(F)</label>
+        <input type="radio" name = "FT" value="T"id="T">
+        <label for="T">이성적(T)</label><br>
+
+        <input type="radio" name = "JP" value="J"id="J">
+        <label for="J">계획형(J)</label>
+        <input type="radio" name = "JP" value="P"id="P">
+        <label for="P">즉흥형(P)</label><br>
+        
+        <input type="submit" value="제출">
+    </form>
+
+    <h3 id = "result"></h3>
+    <script>
+        let one = document.getElementsByName("EI").value;
+        let two = document.getElementsByName("SN").value;
+        let three = document.getElementsByName("FT").value;
+        let four = document.getElementsByName("JP").value;       
+
+        function mbticalc(o,t,th,f){
+            return o + t + th + f
+        }
+        let mbti=mbtical(one, two, three, four);
+        let result = document.getElementById("result");
+        result.innerHTML(`당신의 mbti는 ${result}입니다.`)
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

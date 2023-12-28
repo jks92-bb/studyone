@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI</title>
+</head>
+<body>
+    <form id="mbtiform">
+        <div>
+            <label><input type="radio" name="외향내향" value="E"> 외향적(E)</label>
+            <label><input type="radio" name="외향내향" value="I"> 내향적(I)</label>
+        </div>
+        <div>
+            <label><input type="radio" name="현실직관" value="S"> 현실형(S)</label>
+            <label><input type="radio" name="현실직관" value="N"> 직관형(N)</label>
+        </div>
+        <div>
+            <label><input type="radio" name="감성이성" value="F"> 감성적(F)</label>
+            <label><input type="radio" name="감성이성" value="T"> 이성적(T)</label>
+        </div>
+        <div>
+            <label><input type="radio" name="계획즉흥" value="J"> 계획형(J)</label>
+            <label><input type="radio" name="계획즉흥" value="P"> 즉흥형(P)</label>
+        </div>
+        <button type="button" onclick="calculateMBTI()">제출</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function calculateMBTI(){
+            const selectedRadios = document.querySelectorAll('input[name^="외향내향"]:checked, input[name^="현실직관"]:checked, input[name^="감성이성"]:checked, input[name^="계획즉흥"]:checked');
+            
+            if (selectedRadios.length !== 4) {
+                alert("모든 항목을 선택하세요.");
+                return;
+            }
+
+            const mbti = Array.from(selectedRadios).map(radio => radio.value).join("");
+            
+            // 선택된 라디오 버튼 초기화
+            selectedRadios.forEach(radio => radio.checked = false);
+
+            document.getElementById("result").innerHTML = `당신의 MBTI는 ${mbti}입니다.`;
+            alert(`당신의 MBTI는 ${mbti}입니다.`);
+        }
+    </script>
+</body>
+</html>

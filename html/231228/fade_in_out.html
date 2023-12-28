@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ="jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id = "title">제목입니다. 클릭하시오</p>
+    <button id = "stop">stop</button>
+    <p id = "para">
+        본문입니다.
+    </p> 
+    <script>
+        $(document).ready(function(){
+            $("#stop").click(function(){
+                $("#para").stop();
+            })
+        })
+        $(document).ready(function(){
+            $("#title").css("background-color","gray");
+            $("#title").css("color","white");
+            $("#para").css("background-color","lightgray");
+            $("#para").css("display", "none");
+        })
+        // fadeout :: 자연스럽게 사라지는 모션
+        // $(document).ready(function(){
+        //     $("#title").click(function(){
+        //         $("#para").fadeOut(1200);
+        //     })
+        // })
+        // fadein :: 자연스럽게 나타나는 모션
+        // $(document).ready(function(){
+        //     $("#title").click(function(){
+        //         $("#para").fadeIn(1200);
+        //     })
+        // })
+
+        // fadetoggle :: 자연스럽게 숨기고 나타나게 하는 모션
+        $(document).ready(function(){
+            $("#title").click(function(){
+                $("#para").slideToggle(1200);
+            })
+        })
+    </script>
+    
+</body>
+</html>

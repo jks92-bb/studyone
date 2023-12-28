@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ="jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 버튼 태그 2개와 본문 태그 하나를 생성한다.
+    hide 버튼을 누르면 아래 본문이 사라지면서 알림창을 띄우기
+    show 버튼을 누르면 아래 본문이 사라지면서 알림창을 띄우기
+    단, 숨기너 보여줄 때 시간을 두고 자연스럽게 이루어지도록 하여라. -->
+    <!-- <form>
+        <input type="button" value="Hide" onclick="hide()" id="hideBtn">
+        <input type="button" value="Show" onclick="show()" id="showBtn">
+    </form> -->
+
+    <button onclick="toggle()">Hide</button>
+    <p id="text">본문입니다.</p>
+
+    <script>
+        // // hide 함수 정의
+        // function hide() {
+        //     $("#text").fadeOut(1000, function () {
+        //         alert("본문이 사라집니다.");
+        //     });
+        // }
+
+        // // show 함수 정의
+        // function show() {
+        //     $("#text").fadeIn(1000, function () {
+        //         alert("본문이 나타납니다.");
+        //     });
+        // }
+        function toggle() {
+            
+
+            // 현재 버튼의 텍스트 가져오기
+            var buttonText = $("button").text();
+
+            if (buttonText === "Hide") {
+                // alert 표시
+                alert("본문이 사라집니다");
+                // 숨기기 기능 수행
+                $("#text").stop().fadeOut(1000, function () {
+                    // 버튼 텍스트 변경
+                    $("button").text("Show");
+                });
+
+            } else {
+                // alert 표시
+                alert("본문이 나타납니다");
+                // 나타내기 기능 수행
+                $("#text").stop().fadeIn(10000, function () {
+                    // 버튼 텍스트 변경
+                    $("button").text("Hide");
+                });
+            }
+        }
+    </script>
+    
+</body>
+</html>
