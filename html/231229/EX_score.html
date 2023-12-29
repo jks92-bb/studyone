@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="jungbo"></div>
+    <script>
+        //객체를 아래처럼 생성하라.
+        //필드 :: 1-5과목 성적(배열), good(0으로 초기화)
+        //메소드 ::
+        // 1. subject_score(sc) :: 과락 여부 판단 메소드,
+        // 해당과목 성적이 40점 이상이면 good에 1추가한다.
+        // 2. sum_score() :: 총 과목 평균 판단 메소드, 
+        // 총 평균이 60점 이상이면 good에 1추가한다.
+        // 3. print() :: 모든 과목의 점수와 총 평균을 출력하고
+        // 합격 불합격 여부를 출력한다.
+        // 한 학생의 정보처리기사 필기 시험의 점수에 대해 입력을 받고,
+        // 메소드를 적절히 사용하여 합격여부를 확인하라.
+        // (정보처리기사는 5개 과목이 40점 이상, 총 과목 평균이 60점 이상이어야 한다.)
+
+        let jungbo={
+            
+            scores: [0,0,0,0,0], // 1-5과목 성적(배열)
+            good : 0,   // good 0으로 초기화
+            avarage: 0,
+               
+            setjungbo: function(o,t,th,fo,fi){   //과목 성적 설정
+                this.scores[0] = one;
+                this.scores[1] = two;
+                this.scores[2] = third;
+                this.scores[3] = four;
+                this.scores[4] = five;
+
+            },
+            subject_score: function(){
+                for(let score of this.scores){
+                    if(score>=40){
+                        this.good += 1;
+                    }
+                }
+                //return this.good === this.scores.length;                        
+
+            },
+            sum_score: function(){
+                this.avarage = (this.scores[0] + this.scores[1] + this.scores[2] + this.scores[3] + this.scores[4])/5;
+                if(this.avarage>=60){
+                    this.good +=1;
+                }
+                //return this.good === this.scores.length;        
+                
+            },
+            print: function(){ 
+                if(this.good>=6){
+                    alert(`평균${this.avarage}이며 합격입니다.`);
+                    alert(`${this.good}`)
+                }
+                else{
+                    alert(`평균 ${this.avarage}이며 불합격입니다.`);
+                }              
+
+
+            }  
+
+        }
+        // 학생의 정보처리기사 필기 시험 점수 입력
+        let one = Number(prompt("1과목 점수를 입력하세요:"));
+        let two = Number(prompt("2과목 점수를 입력하세요:"));
+        let third = Number(prompt("3과목 점수를 입력하세요:"));
+        let four = Number(prompt("4과목 점수를 입력하세요:"));
+        let five = Number(prompt("5과목 점수를 입력하세요:"));
+
+        //결과 출력
+        jungbo.setjungbo(one,two,third,four,five);
+        jungbo.subject_score();
+        jungbo.sum_score();
+        jungbo.print();
+        
+        
+
+
+    </script>
+    
+    
+</body>
+</html>

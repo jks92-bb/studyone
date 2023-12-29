@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+
+        let student = {
+            score:[],
+            good: 0, // 0으로 초기화되어서 type이 number가 됨 
+            avarage: 0,     
+            
+            //1. subject_score(sc) -> sc :: 성적을 매개변수로 받음.
+            subject_score: function(sc){
+                if(sc>=40){
+                    this.good++;        // 특정 과목이 과락이 되지 않으면 good 1추가
+                }
+            },
+            //2.sum_score() 
+            sum_score: function(){
+                for(let i=0; i<5; i++){
+                    this.avarage+=this.score[i]; //총합계 우선 구해주고
+                }
+                this.avarage/=5;            // 과목수인 5로 나누어 평균 구함.
+                if(this.avarage>=60){
+                    this.good++;            // 총 평균이 60점을 넘기면 good에 1을 추가.
+                }
+            },
+
+            // 과락이 되지 않았는가에서 5개의 good을 받고
+            // 총점이 기준점을 넘기는가에서 1개의 good을 받아서
+            // 합격하기 위해선 , 총 6개의 good이 필요
+            print: function(){
+                //1) 모든 과목의 점수 출력
+                for(let i =0; i<5; i++){
+                    document.write(`${i+1}과목 점수는 ${this.score[i]}점입니다.`+"<br>");
+                }
+
+                //2) 총 평균의 점수 출력
+                document.write(`총 평균은 ${this.avarage}입니다.`+"<br>");
+
+                //3) 합격 불합격 여부출력
+                if(this.good===6){
+                    document.write("축하드립니다. 합격하셨습니다.");
+                }
+                else{
+                    document.write("불합격하셨습니다.");
+                }
+            
+            }
+        }            
+         
+        for(let i =0; i<5; i++){
+            student.score[i]=Number(prompt(`${i+1}과목 점수를 입력해주세요`,0));
+            student.subject_score(student.score[i]); // 과락 여부 바로 확인
+
+        }
+        student.sum_score();    //평균 구함과 동시에 총점에 대한 합불 여부 확인
+        student.print();           
+           
+        
+
+        
+    </script>
+</body>
+</html>
