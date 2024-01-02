@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 출력버튼 -->
+    <button onclick="StudentInfo()">출력</button>
+    <!-- 학생 정보 목록 -->
+    <ul id="studentInfoList"></ul>
+    <script>
+        // 정보 기록 상태 저장 변수
+        let isInfoDisplayed = false; 
+
+        // 학생 정보 출력 함수
+        function StudentInfo() {
+            const list = document.getElementById("studentInfoList");
+
+            if (isInfoDisplayed) {
+                // 출력된 값이 있을 때 초기화
+                list.innerHTML = "";
+                alert("데이터가 초기화되었습니다.");
+                isInfoDisplayed = false;
+            } else {
+                // 출력된 값이 없을 때 정보 입력 받기
+                const name = prompt("이름을 입력하세요:");
+                const age = prompt("나이를 입력하세요:");
+                const gender = prompt("성별을 입력하세요:");
+                const blood = prompt("혈액형을 입력하세요:");
+                const height = prompt("키를 입력하세요:");
+
+                const student = {
+                    이름: name,
+                    나이: age,
+                    성별: gender,
+                    혈액형: blood,
+                    키: height
+                };
+
+                // 객체의 속성을 반복하여 목록에 추가
+                for (const key in student) {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `${key}: ${student[key]}`;
+                    list.appendChild(listItem);
+                }
+
+                alert("데이터가 출력되었습니다.");
+                isInfoDisplayed = true; // 상태 업데이트
+            }
+        }
+    </script>
+</body>
+</html>

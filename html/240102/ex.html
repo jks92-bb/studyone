@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src ="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button id = "click">clik_button</button>
+    <button id = "bt">clik_button2</button>
+    <p id = "good">아주 좋습니다.</p>
+    <p id = "good2">아주아주 좋습니다.</p>
+
+    <script>
+        // js 이벤트 적용하는 방법
+        // 1. 요소에 직접적으로 명령문이나 함수 적용
+
+        $(document).ready(function(){
+            $(click).click(function(){
+                
+                $(good).slideUp(1000).slideDown(1000,alert("버튼을 클릭하셨습니다."));           
+               
+                
+            })
+        })
+        // 콜백함수 :: 전환/애니메이션 실행하고 난 뒤에 후처리하는 데 사용
+        // 2. (document).ready 생략가능
+        // $(function(){
+        //     $(click).click(function(){
+                
+        //         $(good).slideUp(1000).slideDown(1000,alert("버튼을 클릭하셨습니다."));           
+               
+                
+        //     })
+        // })       
+        //2. 이벤트 리스너 사용
+        //  1) 이벤트를 적용할 요소 당겨오기.
+        let bt1 = document.getElementById("bt")
+        //2) 당겨온 요소에 이벤트 리스너 적용 ->addeventlistener 사용
+        bt1.addEventListener("click",hide)
+        // 3) 이벤트 처리에 사용할 함수 정의
+        function hide(){
+            let para = document.getElementById("good2")
+            para.style.display="none"
+            alert("p 본문이 숨겨졌습니다.");
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>
