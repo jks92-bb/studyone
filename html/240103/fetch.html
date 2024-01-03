@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>아래는 웹에 있는 json 파일에서 불러온 값입니다.</h3>
+    <p id = "test"></p>
+    <script>
+         fetch("https://starfall-yuna.github.io/super-duper-computing-machine/json.json")
+            .then(response => response.json())  // JSON 형태로 응답을 파싱
+            .then(data => {
+                // 가져온 데이터를 처리
+                let para = document.querySelector("#test");
+                para.textContent = `Name: ${data.Name}, Age: ${data.age},blood: ${data.blood},city:${data.city}`;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>
