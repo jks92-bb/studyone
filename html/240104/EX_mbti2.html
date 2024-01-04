@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="외향내향" id="E" value="E">    
+    <label for="E">외향적(E)</label>
+    <input type="radio" name="외향내향" id="I" value="I">
+    <label for="I">내향적(I)</label><br>
+    <input type="radio" name="현실직관" id="S" value="S">
+    <label for="S">현실형(S)</label>
+    <input type="radio" name="현실직관" id="N" value="N">
+    <label for="N">직관형(N)</label><br>
+    <input type="radio" name="감성이성" id="F" value="F">
+    <label for="F">감성적(F)</label>
+    <input type="radio" name="감성이성" id="T" value="T">
+    <label for="T">이성적(T)</label><br>
+    <input type="radio" name="계획즉흥" id="J" value="J">
+    <label for="J">계획형(J)</label>
+    <input type="radio" name="계획즉흥" id="P" value="P">
+    <label for="P">즉흥형(P)</label><br>
+
+    <button id="submit">제출</button>
+    <button id="reset">초기화</button>
+    <br>
+    <p id = "result"></p> <!--결과값 표시할 공간-->
+
+    <script>
+        let = mbti=""  //결과값 저장할 변수 string 으로
+               
+
+        $(function(){
+            $("#submit").click(function(){
+
+                //사용자 선택에 따라, mbti 결과값 추출
+                mbti = "";
+                mbti += document.getElementById("E").checked? "E":"I"
+                mbti += document.getElementById("S").checked? "S":"N"
+                mbti += document.getElementById("F").checked? "F":"T"
+                mbti += document.getElementById("P").checked? "P":"J"
+
+                //console.log(mbti)
+
+                //json 파일에 있는 mbti 설명을 추출
+
+                $.ajax({
+                    url:"https://jks92-bb.github.io/studyone/html/240104/mbti_info.json",
+                    method :"GET",
+                    dataType:"json",
+
+                    success:function(data){
+                        // 현재까지 저장된 mbti 값을 인덱스로 사용해서 값 불러오기.
+                        //const result = mbti + ": " + data[mbti];
+                        //$("#result").text(result);
+                        const result = mbti += ":" + data[mbti]
+                        document.querySelector("#result").textContent=mbti
+                        console.log(mbti)
+
+                    },
+                    error:function(a,b,c){
+                        console.log("error!")
+                    }
+                })
+                
+                })
+
+                $("#reset").click(function(){
+                mbti = "";                
+                $("#result").text("");
+                
+                // 라디오 버튼 초기화
+                $("input[type=radio]").prop("checked", false);
+
+                //정보 초기화 아직 안이루어짐.
+
+            });
+        })
+    </script>
+</body>
+</html>
