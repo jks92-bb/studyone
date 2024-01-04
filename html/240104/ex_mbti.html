@@ -30,12 +30,7 @@
     <h3>mbti 결과를 json 파일에서 가져온 결과입니다.</h3>
     <p id="result"></p>
     <script>
-        
-
-
-
-
-        function calculateMBTI(){
+            function calculateMBTI(){
              
         // 라디오 버튼 값 가져오기
         const 외향내향 = document.querySelector('input[name="외향내향"]:checked');
@@ -52,11 +47,9 @@
         // MBTI 계산
         const mbti = 외향내향.value + 현실직관.value + 감성이성.value + 계획즉흥.value;
 
-            // 결과 출력
-            document.getElementById("result").innerHTML = `당신의 MBTI는 ${mbti}입니다.`;
-            alert(`당신의 MBTI는 ${mbti}입니다.`);
-
-            }
+        // 결과 출력
+           
+        alert(`당신의 MBTI는 ${mbti}입니다.`);          
 
         $.ajax({
             url:"https://jks92-bb.github.io/studyone/html/240104/mbti_info.json",
@@ -65,13 +58,13 @@
 
             success:function(data){
                 let para = $("#result")
-                para.text(`data[${mbti}]`)
+                para.text(data[mbti])
             },
             error:function(jqXHR,textStatus,errorThrown){
                 console.log("error")
             }
         })
-        
+    }
 
 
 
