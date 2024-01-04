@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>url을 통해서 응답받은 파일입니다.</h3>
+    <p id ="para"></p>
+    
+    <!-- <script>
+        // Ajax 통신 :: js 사용, jq 사용
+        // 1. js 사용 ->    XMLHttpRequest (xhttp) 
+        const x = new XMLHttpRequest()
+
+        //2. 서버에 요청을 보냄 
+        x.open("GET","https://Starfall-Yuna.github.io/ubiquitous-disco/mbti.json")         //서버에 보낼 요청 내용 작성
+        x.send()    //실질적으로 서버에 요청
+
+        //3. 서버가 준비되었을 때(=서버로 응답이 왔을 때), 실행할 함수 정의
+        x.onreadystatechange = function(){
+            if(this.readyState===4 && this.status===200){            
+            let para = document.querySelector("#para")
+            para.textContent=JSON.parse(this.responseText)["INTJ"]
+            //innerHTML :: html 코드를 삽입
+            //textcontent :: 텍스트 형식으로 삽입
+            // ex <span> paragragh </span>
+            }
+            else{
+                console.log("error")
+            }
+
+        }
+        </script> -->
+
+    <!-- <script>
+            //[js사용] fetch API 통해서 ajax 통신 시도. 
+            fetch("https://Starfall-Yuna.github.io/ubiquitous-disco/mbti.json")
+            .then(response=>{       // 요청을 보냈을 때 응답이 잘 도착했는지 검증.
+                if(!response.ok){   // 응답이 제대로 도착하지 않았을 때
+                    throw new Error(`400 or 500 error`)
+                }
+                return response.json()
+            })
+            .then(data=>{
+                let para = document.querySelector("#para")
+                para.textContent=data["INTJ"]
+                
+            })
+            .catch(error=>{
+                console.log("error 발생")
+            })
+    </script> -->
+    <script>
+        // jq ajax()통한 ajax 통신 시도
+        $.ajax({
+            url:"https://Starfall-Yuna.github.io/ubiquitous-disco/mbti.json",
+            method : "GET",
+            dataType : "json",
+            // 여기까지 실행했을 시 서버에 파일 요청이 들어감.
+
+            // 서버 응답 결과에 따라 분기가 나뉘어짐
+            success: function(data){    //data ::응답내용
+                let para = $("#para")
+                para.text(data["INTJ"])
+            },
+            error: function(jqxhr, textStatus, errorThrown) {
+            console.log("error");
+            }
+        })
+
+    </script>
+                                   
+</body>
+</html>
