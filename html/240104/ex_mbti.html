@@ -27,8 +27,14 @@
     
         <button type="button" onclick="calculateMBTI()">제출</button>
     </form>
+    <h3>mbti 결과를 json 파일에서 가져온 결과입니다.</h3>
     <p id="result"></p>
     <script>
+        
+
+
+
+
         function calculateMBTI(){
              
         // 라디오 버튼 값 가져오기
@@ -51,6 +57,20 @@
             alert(`당신의 MBTI는 ${mbti}입니다.`);
 
             }
+
+        $.ajax({
+            url:"https://jks92-bb.github.io/studyone/html/240104/mbti_info.json",
+            method :"GET",
+            dataType:"json",
+
+            success:function(data){
+                let para = $("#result")
+                para.text(`data[${mbti}]`)
+            },
+            error:function(jqXHR,textStatus,errorThrown){
+                console.log("error")
+            }
+        })
         
 
 
