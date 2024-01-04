@@ -58,7 +58,7 @@
 
             success:function(data){
                 let para = $("#result")
-                para.text(data[mbti])
+                para.text(mbti+":"+data[mbti])
             },
             error:function(jqXHR,textStatus,errorThrown){
                 console.log("error")
