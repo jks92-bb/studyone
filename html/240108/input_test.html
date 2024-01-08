@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		/*function twosend(){
+			var formData = new FormData(document.forms["form1"]);
+			// 여기서 formData를 서버로 보내고, 필요한 처리를 합니다.
+
+			 // 첫 번째 창 열기
+            var newWindow1 = window.open("servlet_test", "_blank");
+            
+            // 첫 번째 창에 데이터 전송
+            fetch("servlet_test1.java", {
+                method: "POST",
+                body: formData
+            });
+
+            // 두 번째 창 열기
+            var newWindow2 = window.open("info.jsp", "_blank");
+            
+            // 두 번째 창에 데이터 전송
+            fetch("info.jsp", {
+                method: "POST",
+                body: formData
+            });
+		}
+		
+		
+	</script>
+	
+	
+	
+	
+	<!--getParameter(name) ::전달받은 값을 처리 -->
+		
+<form method="get" >
+	
+	<label>이름 : </label>
+	<input type = "text" id = "name" name = "name">
+	<label>나이 :</label>
+	<input type = "text" id = "age" name = "age">
+	<br>
+	<label>전공 :</label>
+	<input type ="radio" name = "major" value = "computer">
+	<label>컴공</label>
+	<input type ="radio" name = "major" value = "mechanic">
+	<label>기계공</label>
+	<input type ="radio" name = "major" value = "math">
+	<label>수학</label>
+	<br>
+	
+	<!--취미 선택 :: 체크박스 타입-->
+	<label>취미 :</label>
+	<input type ="checkbox" name = "hobby" value = "jogging">
+	<labal>조깅</labal>
+	<input type ="checkbox" name = "hobby" value = "swimming">
+	<labal>수영</labal>
+	<input type ="checkbox" name = "hobby" value = "pcgame">
+	<labal>pc게임</labal>
+	<input type ="checkbox" name = "hobby" value = "sleep">
+	<labal>잠</labal>
+	<br>
+	
+	<!-- 주로 이용하는 포털 사이트 선택 :: select 타입 -->
+	<label>애용하는 사이트 :</label>
+	<select name = "site">
+	 <option value = "naver" >네이버</option>
+	 <option value = "google" >구글</option>
+	 <option value = "github">깃헙</option>
+	</select>
+	<br>
+	
+	<input type = "submit" value ="제출"  oneclick=action:"servlet_test" ondblclick="action:info.jsp">
+	<input type = "reset" value =" 초기화"> <!--입력값 초기화-->
+	
+	
+	
+</form>
+
+</body>
+</html>

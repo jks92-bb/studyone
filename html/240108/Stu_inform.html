@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+        function limitCheckboxSelection(checkbox) {
+            var checkboxes = document.getElementsByName(checkbox.name);
+
+            checkboxes.forEach(function (currentCheckbox) {
+                if (currentCheckbox !== checkbox) {
+                    currentCheckbox.checked = false;
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+	
+<form action ="stu_info" method="get">
+	
+		인종:
+		<input type ="text" id = "Kinds" name="Kinds"> <br>
+		이름:
+		<input type = "text" id = "name" name="name"> <br>
+		나이:
+		<input type = "text" id ="age" name="age"> <br>
+		성별:				
+		<input type ="checkbox" id="male" name = "gender" value = "남성" onchange="limitCheckboxSelection(this)">
+		<labal for = "male"onclick="document.getElementById('male').click()">남성</labal>
+		<input type ="checkbox"  id="female" name = "gender" value = "여성" onchange="limitCheckboxSelection(this)">
+		<labal for = "female" onclick="document.getElementById('female').click()">여성</labal>
+		<input type = "submit" value="제출">	
+</form>
+</body>
+</html>
