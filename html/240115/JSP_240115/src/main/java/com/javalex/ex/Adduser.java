@@ -1,0 +1,55 @@
+package com.javalex.ex;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Adduser
+ */
+@WebServlet("/Add")
+public class Adduser extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Adduser() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//html  입력값 처리
+		request.setCharacterEncoding("UTF-8");
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		String name = request.getParameter("name");
+		int age = Integer.parseInt(request.getParameter("age"));
+		String gender = request.getParameter("gender");
+		//DB 연결 -> DAO 처리
+		
+		userDao dao = new userDao();	// 드라이버 로드
+		dao.insertUser(id, pw, name, age, gender); //insert
+		
+		response.sendRedirect("JoinForm.html");
+		
+		
+		
+	}
+
+}
