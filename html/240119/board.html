@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .board {
+            margin-top: 20px;
+        }
+
+        .post {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        #titleInput,
+        #contentInput {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-container">
+            <!-- 검색 입력 필드 -->
+            <input class="input" type="text" id="searchInput" onkeypress="handleKeyPress(event)">
+
+            <!-- 검색 아이콘 (SVG) -->
+            <svg viewBox="0 0 24 24" class="search__icon" style="cursor: pointer; fill: black;" onclick="search()">
+                <g>
+                    <path
+                        d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                    </path>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+
+
+
+    <div>
+        <label for="titleInput">제목:</label>
+        <input type="text" id="titleInput">
+
+        <label for="contentInput">내용:</label>
+        <input type="text" id="contentInput">
+
+        <button onclick="addPost()">게시글 추가</button>
+    </div>
+
+    <div class="board">
+        <!-- 여러 게시글을 나타내는 부분 -->
+        <div class="post" id="post1">게시글 1: 제목1 - 내용1</div>
+        <div class="post" id="post2">게시글 2: 제목2 - 내용2</div>
+        <div class="post" id="post3">게시글 3: 제목3 - 내용3</div>
+    </div>
+
+    <script>
+        // 더미 데이터
+        const postsData = [
+            { id: 'post1', title: '제목1', content: '내용1' },
+            { id: 'post2', title: '제목2', content: '내용2' },
+            { id: 'post3', title: '제목3', content: '내용3' },
+        ];
+
+        // 페이지 로드 시 게시글을 표현
+        renderPosts();
+
+        // 게시글을 동적으로 생성하여 추가하는 함수
+        function renderPosts() {
+            const boardElement = document.getElementById('board');
+            boardElement.innerHTML = '';
+
+            postsData.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('post');
+                postElement.id = post.id;
+                postElement.dataset.title = post.title;
+                postElement.innerHTML = `게시글 ${post.id}: ${post.title} - ${post.content}`;
+                boardElement.appendChild(postElement);
+            });
+        }
+
+
+
+       
+
+        function search() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const boardElement = document.getElementById('board');
+            const posts = boardElement.getElementsByClassName('post');
+
+            Array.from(posts).forEach(post => {
+                const title = post.dataset.title.toLowerCase();
+                if (title.includes(searchInput)) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+
+        function handleKeyPress(event) {
+            // 엔터 키 눌렀을 때 동작
+            if (event.key === 'Enter') {
+                search();
+            }
+        }
+
+
+
+         
+
+        // 새로운 게시글 추가하는 함수
+        function addPost() {
+            const titleInput = document.getElementById('titleInput');
+            const contentInput = document.getElementById('contentInput');
+
+            if (titleInput.value && contentInput.value) {
+                const newPost = {
+                    id: `post${postsData.length + 1}`,
+                    title: titleInput.value,
+                    content: contentInput.value,
+                };
+
+                postsData.push(newPost);
+
+                const boardElement = document.querySelector('.board');
+                const newPostElement = document.createElement('div');
+                newPostElement.classList.add('post');
+                newPostElement.id = newPost.id;
+                newPostElement.innerHTML = `게시글 ${newPost.id}: ${newPost.title} - ${newPost.content}`;
+                boardElement.appendChild(newPostElement);
+
+                // 입력 필드 초기화
+                titleInput.value = '';
+                contentInput.value = '';
+            }
+        }
+
+        // 페이지 로드 시 게시글을 표현
+        window.onload = renderPosts;
+    </script>
+</body>
+
+</html>
