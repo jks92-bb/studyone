@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<ul id="dataList">
+		<!-- 최초에 서버에서 받아온 데이터를 여기에 표시 -->
+	</ul>
+
+	<script>
+		// 페이지 로드 후 초기 데이터 로딩
+		window.onload = function () {
+			fetchData();
+		};
+
+		// 주기적으로 데이터 업데이트
+		setInterval(fetchData, 5000); // 5초마다 업데이트 (원하는 주기로 수정 가능)
+
+		function fetchData() {
+			// AJAX를 사용하여 서버에서 데이터 가져오기
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "getData.jsp", true);
+
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					alert("테스트중")
+					// 서버에서 받아온 텍스트 데이터 사용
+					var responseData = xhr.responseText;
+					console.log("Received data: " + responseData);
+
+					// 텍스트 데이터를 그대로 사용
+					updateList(responseData);
+
+				}
+			};
+
+			xhr.send();
+		}
+
+		function updateList(data) {
+			var dataList = document.getElementById("dataList");
+
+			// 기존 리스트 초기화
+			dataList.innerHTML = "";
+
+			// 받아온 텍스트 데이터로 리스트 업데이트
+			var listItem = document.createElement("li");
+			listItem.textContent = data;
+			dataList.appendChild(listItem);
+		}
+		
+	</script>
+</body>
+
+</html>
