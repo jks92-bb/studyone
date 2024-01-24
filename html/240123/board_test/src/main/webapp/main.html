@@ -18,7 +18,7 @@
 		};
 
 		// 주기적으로 데이터 업데이트
-		setInterval(fetchData, 5000); // 5초마다 업데이트 (원하는 주기로 수정 가능)
+		//setInterval(fetchData, 500000); // 5초마다 업데이트 (원하는 주기로 수정 가능)
 
 		function fetchData() {
 			// AJAX를 사용하여 서버에서 데이터 가져오기
@@ -27,7 +27,7 @@
 
 			xhr.onreadystatechange = function () {
 				if (xhr.readyState == 4 && xhr.status == 200) {
-					alert("테스트중")
+					
 					// 서버에서 받아온 텍스트 데이터 사용
 					var responseData = xhr.responseText;
 					console.log("Received data: " + responseData);

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+ <h2>글 작성 폼</h2>
+
+    <form id="postForm">
+        <label for="author">작성자:</label>
+        <input type="text" id="author" name="author" required>
+
+        <br>
+
+        <label for="title">제목:</label>
+        <input type="text" id="title" name="title" required>
+
+        <br>
+
+        <label for="content">내용:</label>
+        <textarea id="content" name="content" rows="4" required></textarea>
+
+        <br>
+
+        <button type="button" onclick="submitPost()">글 작성</button>
+    </form>
+
+    <script>
+        function submitPost() {
+            // 폼 데이터 가져오기
+            var author = document.getElementById("author").value;
+            var title = document.getElementById("title").value;
+            var content = document.getElementById("content").value;
+
+            // 폼 데이터를 서버로 전송할 수 있는 로직을 추가하면 됨
+            // 여기서는 간단하게 콘솔에 출력
+            console.log("작성자:", author);
+            console.log("제목:", title);
+            console.log("내용:", content);
+
+            // 추가로 서버로 데이터를 전송하는 로직을 작성할 수 있음
+        }
+    </script>
+</body>
+</html>
