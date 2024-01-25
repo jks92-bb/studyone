@@ -21,53 +21,6 @@
 				showLoginSuccessAlert();
 			}
 		};
-		
-			/* 기본 서치 코드 */
-    /*function search() {
-         const searchInput = document.getElementById("searchInput");
-    if (searchInput.value.trim() === "") {
-        alert("검색어를 입력하세요.");
-        return false;  // 제출 막기
-    }
-    document.getElementById("searchForm").submit();
-    }*/
-     // Ajax로 서버에서 데이터를 가져와서 resultContainer에 표시하는 함수
-        function fetchAndDisplayData() {
-            // Ajax 요청 시작
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "getlist.jsp", true);
-
-            // Ajax 요청이 완료되면 실행되는 콜백 함수
-            xhr.onload = function () {
-                if (xhr.status == 200) {
-                    // 서버에서 받아온 HTML을 resultContainer에 삽입
-                    document.getElementById("resultContainer").innerHTML = xhr.responseText;
-                }
-            };
-
-            // Ajax 요청 전송
-            xhr.send();
-        }
-
-        // 페이지 로드 시 초기 데이터 로딩
-        window.onload = function () {
-            fetchAndDisplayData();
-        };
-
-        // 검색 함수
-        function search(query) {
-            // Ajax로 서버에서 데이터를 가져와서 resultContainer에 표시
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "search.do?searchKeyword=" + encodeURIComponent(query), true);
-            xhr.onload = function () {
-                if (xhr.status == 200) {
-                    document.getElementById("resultContainer").innerHTML = xhr.responseText;
-                }
-            };
-
-            xhr.send();
-        }	
-		
 	</script>
 </head>
 
@@ -94,49 +47,69 @@
 		</div>
 	</nav>
 	<div class="container">
-    <div class="search-container">
-        <div class="col-lg-8">
-            <form action="search.do" method="get" id ="searchForm">
-                <!-- 검색 입력 필드 -->
-                <input class="input" type="text" name="searchKeyword" id="searchInput" >
-                <!-- 검색 아이콘 (SVG) -->                
-                    <svg viewBox="0 0 24 24" class="search__icon" style="cursor: pointer; fill: black;" onclick="search()">
+		<div class="search-container">
+			<div class="col-lg-8">
+				<!--<form action="search.do" method="get" id="searchForm">-->
+				<!--  검색 입력 필드 
+                    <input class="input" type="text" name="searchKeyword" id="searchInput">-->
+				<!-- 검색 아이콘 (SVG) -->
+				<!-- <svg viewBox="0 0 24 24" class="search__icon" style="cursor: pointer; fill: black;"
+                        onclick="search()">
                         <g>
-                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                            <path
+                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            </path>
                         </g>
-                    </svg>                
-            </form>
-        </div>
-    </div>
-</div>
-<hr>
-<div>
-	<button onclick="search('메이플')">메이플스토리</button><br>
-	<div id = "resultContainer">
-	<!-- getlist.jsp 에서 나온 테이블들이 여기서 표현되면 좋겠다.-->
-	
-	</div>	
-</div>
+                    </svg>-->
+				<div class="search-container">
 
-<div>
-	<button onclick="search('오버워치')">오버워치</button><br>
-	<div id = "resultContainer">
-	<!-- getlist.jsp 에서 나온 테이블들이 여기서 표현되면 좋겠다.-->
-	
+					<a href="search.do?searchKeyword=메이플"><button>메이플스토리</button></a>&nbsp;
+					<a href="search.do?searchKeyword=오버워치"><button>오버워치</button></a>&nbsp;
+					<a href="search.do?searchkeyword=디아블로"><button>디아블로</button></a>&nbsp;
+					<a href="search.do?searchkeyword=기타"><button>기타 겜</button></a>&nbsp;
+				</div>
+				<div class="search-container">
+					<select onchange="location = this.value;">
+						<option value="search.do?searchKeyword=메이플">메이플스토리</option>
+						<option value="search.do?searchKeyword=오버워치">오버워치</option>
+						<option value="search.do?searchKeyword=디아블로">디아블로</option>
+						<option value="search.do?searchKeyword=기타">기타 겜</option>
+					</select>
+				</div>
+			</div>
+			<!--</form>-->
+		</div>
 	</div>
-	
-</div>
+	</div>
+	<hr>
+	<div>
+		<a href="search.do?searchKeyword=메이플"><button>메이플스토리</button></a>
+		<a href="search.do?searchKeyword=오버워치"><button>오버워치</button></a>
+		<a href="search.do?searchkeyword=디아블로"><button>디아블로</button></a>
+	</div>
+
+	<!--<div id="resultContainer">
+         getlist.jsp 에서 나온 테이블들이 여기서 표현되면 좋겠다.
+    </div>-->
 
 
 
+	<script>
+		/* 기본 서치 코드 */
+		function search() {
+			const searchInput = document.getElementById("searchInput");
+			if (searchInput.value.trim() === "") {
+				alert("검색어를 입력하세요.");
+				return false; // 제출 막기
+			}
+			document.getElementById("searchForm").submit();
+		}
+	</script>
 
-			
-			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-					
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-			
 </body>
 
 </html>

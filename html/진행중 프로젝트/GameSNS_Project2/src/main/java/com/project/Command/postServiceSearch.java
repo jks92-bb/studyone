@@ -11,6 +11,7 @@ import com.project.DTO.PostDTO;
 public class postServiceSearch implements postService {
 	public ArrayList<PostDTO> execute(HttpServletRequest request, HttpServletResponse response) {
 		ArrayList<PostDTO> result = new ArrayList<PostDTO>();
+		
 		System.out.println("진행중 postService1");
 
 		// 검색어 받아오기.
@@ -28,7 +29,9 @@ public class postServiceSearch implements postService {
 		
 
 		System.out.println("진행중 postService2");
+		
 		request.setAttribute("postList", result);
+		
 		System.out.println("진행중 postService3");
 
 		return result;

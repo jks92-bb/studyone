@@ -79,7 +79,7 @@ public class CommandController extends HttpServlet {
 		} else if (command.equals("/login.do")) {
 			System.out.println("<로그인>을 수행합니다.");
 			uService = new UserServiceLogin();
-		} else if (command.equals("/search.do")) {
+		} else if (command.equals("/search.do")||command.equals("/view.do")) {
 			System.out.println("<게시판 검색>을 수행합니다.");
 			pService = new postServiceSearch();
 			System.out.println("<게시판 검색>완료");
