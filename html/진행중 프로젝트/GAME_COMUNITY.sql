@@ -1,33 +1,47 @@
-CREATE TABLE USE1R(
-	IDX INT AUTO_INCREMENT unique,   -- 아이디 고유번호
-	ID varchar(255) PRIMARY KEY,				-- 유저 아이디
-    PW varchar(255),				-- 유저 비밀번호
-    PWQS VARCHAR(255),				-- 유저 비밀번호 찾기 질문
-    PWHINT VARCHAR(255),			-- 유저 비밀번호 찾기 힌트
-    HP varchar(255),      			-- 유저 휴대폰번호
-    ADDRESS VARCHAR(255),       	-- 유저 주소
-    NAME VARCHAR(255),				-- 유저 이름
-    NICKNAME VARCHAR(255),  		-- 유저 닉네임
-    FOLLOW VARCHAR(255), 			-- 팔로우
-    FOLLOWER VARCHAR(255),   		-- 팔로워
-    lastenter date,					-- 마지막 접속일자
-    deleteday date,					-- 탈퇴신청일
-    deletecheck int					--  탈퇴여부 확인
+-- CREATE TABLE USE1R(
+-- 	IDX INT AUTO_INCREMENT unique,   -- 아이디 고유번호
+-- 	ID varchar(255) PRIMARY KEY,				-- 유저 아이디
+--     PW varchar(255),				-- 유저 비밀번호
+--     PWQS VARCHAR(255),				-- 유저 비밀번호 찾기 질문
+--     PWHINT VARCHAR(255),			-- 유저 비밀번호 찾기 힌트
+--     HP varchar(255),      			-- 유저 휴대폰번호
+--     ADDRESS VARCHAR(255),       	-- 유저 주소
+--     NAME VARCHAR(255),				-- 유저 이름
+--     NICKNAME VARCHAR(255),  		-- 유저 닉네임
+--     FOLLOW VARCHAR(255), 			-- 팔로우
+--     FOLLOWER VARCHAR(255),   		-- 팔로워
+--     lastenter date,					-- 마지막 접속일자
+--     deleteday date,					-- 탈퇴신청일
+--     deletecheck int					--  탈퇴여부 확인useruser
+-- );
+
+-- CREATE TABLE BOARD(
+-- IDX INT AUTO_INCREMENT PRIMARY KEY,  	-- 게시글 고유번호
+-- ID VARCHAR(255),						-- 작성자 아이디	
+-- NICKNAME VARCHAR(255),            	  	-- 작성자 닉네임
+-- TITLE VARCHAR(255),   					-- 타이틀
+-- CONTENT VARCHAR(5000),  					-- 내용
+-- DATE DATETIME, 							-- 날짜
+-- HIT INT, 								-- 조회수 
+-- FILE VARCHAR(255), 						-- 업로드 파일
+-- isgood int,								-- 좋아요 수
+-- FOREIGN KEY (USER_ID) REFERENCES USER(IDX)
+
+-- );
+
+drop table board;
+
+create table board(
+IDX int auto_increment primary key,
+tag varchar(50) not null,    -- 태그
+id varchar(255) not null,    -- 아이디
+title varchar(1000) not null,    -- 타이틀 제목
+content varchar(5000) not null,   -- 내용
+date datetime not null,     -- 일자
+file blob,                -- 파일
+isgood int not null
 );
 
-CREATE TABLE BOARD(
-IDX INT AUTO_INCREMENT PRIMARY KEY,  	-- 게시글 고유번호
-ID VARCHAR(255),						-- 작성자 아이디	
-NICKNAME VARCHAR(255),            	  	-- 작성자 닉네임
-TITLE VARCHAR(255),   					-- 타이틀
-CONTENT VARCHAR(5000),  					-- 내용
-DATE DATETIME, 							-- 날짜
-HIT INT, 								-- 조회수 
-FILE VARCHAR(255), 						-- 업로드 파일
-isgood int,								-- 좋아요 수
-FOREIGN KEY (USER_ID) REFERENCES USER(IDX)
-
-);
 
 CREATE TABLE post_info (
     post_no INT AUTO_INCREMENT PRIMARY KEY,			-- 포스트 번호
@@ -93,12 +107,12 @@ CREATE TABLE BOARD_REPLY(
 CREATE TABLE USER(
    idx INT AUTO_INCREMENT unique,  -- 아이디 고유번호
    id varchar(255) PRIMARY KEY,   -- 유저 아이디
-    nickname VARCHAR(255),           -- 유저 닉네임
-    pw varchar(255),            -- 유저 비밀번호
-    name VARCHAR(255),            -- 유저 이름
-    tel varchar(255),               -- 유저휴대폰번호
-    address VARCHAR(255),             -- 유저 주소
-    email varchar(255),           -- 유저 이메일
+    nickname VARCHAR(255) not null,           -- 유저 닉네임
+    pw varchar(255) not null,            -- 유저 비밀번호
+    name VARCHAR(255) not null,            -- 유저 이름
+    tel varchar(255) not null,               -- 유저휴대폰번호
+    address VARCHAR(255) not null,             -- 유저 주소
+    email varchar(255) not null,           -- 유저 이메일
     birth varchar(100)
 );
 
