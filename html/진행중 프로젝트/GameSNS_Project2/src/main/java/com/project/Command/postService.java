@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.project.DTO.PostDTO;
 
 public interface postService {
+	// 이전과 다음 버튼에 대한 상수 정의
+    String PREVIOUS_BUTTON = "이전";
+    String NEXT_BUTTON = "다음";
 
 	public ArrayList<PostDTO> execute(HttpServletRequest request, HttpServletResponse response);
+	public ArrayList<PostDTO> execute(HttpServletRequest request, HttpServletResponse response, Pagination pagination);
 }
