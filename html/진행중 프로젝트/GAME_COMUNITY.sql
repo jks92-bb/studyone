@@ -129,6 +129,12 @@ CREATE TABLE BOARD (
    
 );
 
+-- 단계 1: 기존 행 업데이트
+UPDATE `apidb`.`board` SET `viewcount` = 0 WHERE `viewcount` IS NULL;
+
+-- 단계 2: 열을 NOT NULL로 변경
+ALTER TABLE `apidb`.`board` MODIFY COLUMN `viewcount` INT NOT NULL;
+
  
 SELECT * FROM BOARD;
 
