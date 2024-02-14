@@ -13,7 +13,7 @@ rc('font', family=font_name)
 url = 'http://apis.data.go.kr/1360000/AsosDalyInfoService/getWthrDataList'
 params ={'serviceKey' : '5yc3PHYWjB8vIqrwOK/TSWcKHhDYNacfLGjFQE+SPWmXTBg0vuZV/WkCQ/wJGV4rA6ch7QFRJe8nLu5UZEhHDQ==',
          'pageNo' : '1', 'numOfRows' : '10', 'dataType' : 'XML', 'dataCd' : 'ASOS', 'dateCd' : 'DAY', 'startDt' : '20231201',
-         'endDt' : '20231203', 'stnIds' : '143' }
+         'endDt' : '20231205', 'stnIds' : '143' }
 
 response = requests.get(url, params=params)
 xmldatas = elemTree.fromstring(response.text)
