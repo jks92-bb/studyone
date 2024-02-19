@@ -39,7 +39,7 @@ def get_character_basic(ocid, date):
     if not ocid:
         return {"캐릭터 정보가 불확실합니다. 불러오질 못하고 있습니다."}
     headers = {
-        "x-nxopen-api-key": "test_e6f5684cbfb6237d5d3ff8740d5ee712aeb8ddd9ba8877df5e1d291949e7e6a280553df27fa82c9e2a239d36cabd158b"
+        "x-nxopen-api-key": "2"
     }
 
     url_string = f"https://open.api.nexon.com/maplestory/v1/character/basic?ocid={ocid}&date={date}"
@@ -56,7 +56,7 @@ def get_character_stat(ocid, date):
     if not ocid:
         return {"캐릭터 정보가 불확실합니다. 불러오질 못하고 있습니다."}
     headers = {
-        "x-nxopen-api-key": "test_e6f5684cbfb6237d5d3ff8740d5ee712aeb8ddd9ba8877df5e1d291949e7e6a280553df27fa82c9e2a239d36cabd158b"
+        "x-nxopen-api-key": "2"
     }
 
     url_string = f"https://open.api.nexon.com/maplestory/v1/character/stat?ocid={ocid}&date={date}"
