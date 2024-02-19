@@ -8,8 +8,10 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
 }
-#loginButton {
-   background-color: black;
+#Button {
+   background-color: rgb(39, 88, 220);
     height: 200px;
+    width: 200px;
+    
 
 }

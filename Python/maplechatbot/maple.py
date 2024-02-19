@@ -16,6 +16,7 @@ yesterday_str= yesterday.strftime("%Y-%m-%d")
 
 print(yesterday_str)
 
+
 import requests
 from datetime import datetime, timedelta
 
