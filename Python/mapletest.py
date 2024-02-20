@@ -128,6 +128,7 @@ def main():
 
         print('Data based on NEXON Open API')
         print(result)
+        print(character_stat)
         return  result
     else:
         print(character_data)
