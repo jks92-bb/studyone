@@ -115,6 +115,7 @@ class SmartWatch extends Watch {
     }
 
     //Setting(int,int, int ,String,String) : 시간 및 시계줄 색상 설정 , os 설정
+
     public void Setting(int h, int m, int s, String st, String o) {
         this.Setting(h, m, s, st);
         this.os = o;

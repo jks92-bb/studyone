@@ -9,8 +9,5 @@ COMMIT;
 -- ROLLBACK TO [세이브포인트명]  -> 지정된 세이브포인트로 회귀
 ROLLBACK;
 
-
-
-
 -- SAVEPOINT : 지점 저장.
 --  SAVEPOINT [저장할 세이브포인트명];

@@ -22,6 +22,7 @@ public class Extends {
         Phone phone = new Phone();
         SmartPhone smartPhone = new SmartPhone();
 
+        smartPhone.tel ="010-0000-0000";
         phone.tel = "010-0000-0000";     // 에러x, 자기 자신의 멤버 접근
         //phone.os = "Android 10";        // 에러 발생, 다른 클래스의 멤버 접근.
         // 상위 클래스 객체 ->> 하위 클래스 멤버 접근x
@@ -29,6 +30,11 @@ public class Extends {
         smartPhone.foldable = true;     // 에러 x, 상위 클래스의 멤버 접근.
         // 하위 클래스 객체 ->> 상위 클래스 멤버 접근o
 
+        // 콘솔에 결과 출력
+        System.out.println("smartPhone tel :"+ smartPhone.tel);
+        System.out.println("Phone Tel: " + phone.tel);
+        System.out.println("SmartPhone Network: " + smartPhone.network);
+        System.out.println("SmartPhone Foldable: " + smartPhone.foldable);
 
     }
 }

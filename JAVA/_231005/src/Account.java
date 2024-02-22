@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Custmomer {
+class Customer {
     Scanner scanner = new Scanner(System.in);
     private int acc_num;
     private String id;
@@ -58,13 +58,13 @@ class Custmomer {
     }
 
     // 생성자
-    public Custmomer(int acc, String u, String p) {
+    public Customer(int acc, String u, String p) {
         this.acc_num = acc;
         this.id = u;
         this.password = p;
     }
 
-    public Custmomer() {
+    public Customer() {
         this.acc_num = 0000;
         this.id = "user";
         this.password = "0000";
@@ -79,30 +79,44 @@ public class Account {
         Scanner scanner = new Scanner(System.in);
 
         // 배열선언 manager 객체 생성
-        Custmomer manager[] = new Custmomer[3];
+        Customer manager[] = new Customer[3];
 
         // manager 초기화.
         for (int i = 0; i < 3; i++) {
-            manager[i] = new Custmomer();
+            manager[i] = new Customer();
         }
 
 
         for (int i = 0; i < 3; i++) {
-
 
             System.out.println("회원 정보를 입력하세요 (번호 아이디 비밀번호):");
             System.out.println(i + 1 + "번째");
             int a = scanner.nextInt();
             String u = scanner.next();
             String p = scanner.next();
-            manager[i] = new Custmomer(a, u, p);
+
+            // 아이디 중복 체크
+            boolean isDuplicate = false;
+            for (int j = 0; j < i; j++) {
+                if (manager[j].getId().equals(u)) {
+                    System.out.println("이미 존재하는 아이디입니다. 다른 아이디를 입력해주세요.");
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (isDuplicate) {
+                i--;
+            } else {
+                manager[i] = new Customer(a, u, p);
+            }
 
 
         }
 
         // user 정보 입력
         System.out.println("사용자 정보를 입력하세요 (번호 아이디 비밀번호):");
-        Custmomer user = new Custmomer(scanner.nextInt(), scanner.next(), scanner.next());
+        Customer user = new Customer(scanner.nextInt(), scanner.next(), scanner.next());
 
         // user 비밀번호 변경
         System.out.println("비밀 번호 변경하시오");
