@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from maple import get_character_basic, get_character_data, get_character_stat
 from datetime import datetime, timedelta
+import level
 
 #현재 날짜
 today=datetime.now()
